@@ -251,8 +251,8 @@ namespace WebUI.Controllers
             }
         
            // var games = await BetDatabase.Matches.Include(g => g.AwayTeam).Include(g => g.HomeTeam).Include(g => g.GameOdds.Select(c=>c.BetOption)).ToListAsync();
-            var games = await BetDatabase.ShortMatchCodes.Include(s => s.Match).ToListAsync();
-            var filteredgames = games.Select(g => new GameViewModel
+            var games = await BetDatabase.ShortMatchCodes.Include(s => s.Match).OrderBy(x => x.ShortCode).ToListAsync();
+;            var filteredgames = games.Select(g => new GameViewModel
             {
                 AwayScore = g.Match.AwayScore,
                 AwayTeamId = g.Match.AwayTeamId,

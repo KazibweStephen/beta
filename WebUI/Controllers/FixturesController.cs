@@ -279,9 +279,9 @@ namespace WebUI.Controllers
                                  "[dbo].[Getodd]('Both Teams To Score','GG',M.MatchNo) as BTYes," +
                                  "[dbo].[Getodd]('Both Teams To Score','NG',M.MatchNo) as BTNo," +
                                 "[dbo].[Getodd]('Handicap','HC1',M.MatchNo) as Handicap1," +
-                                   "[dbo].[Getodd]('Handicap','HCX',M.MatchNo) as HandicapX," +
-                                     "[dbo].[GetHandicapGoals] (M.MatchNo) as Goals," +
-                                   "[dbo].[Getodd]('Handicap','HC2',M.MatchNo) as Handicap2," +
+                                 "[dbo].[Getodd]('Handicap','HCX',M.MatchNo) as HandicapX," +
+                                 "[dbo].[GetHandicapGoals] (M.MatchNo) as Goals," +
+                                 "[dbo].[Getodd]('Handicap','HC2',M.MatchNo) as Handicap2," +
                                  "[dbo].[Getodd]('Draw No Bet','DNB1',M.MatchNo) as DNB1," +
                                  "[dbo].[Getodd]('Draw No Bet','DNB2',M.MatchNo) as DNB2 from Matches M inner join dbo.ShortMatchCodes sm on sm.MatchNo=m.MatchNo "
                                  + " where(StartTime>getdate()) and m.MatchNo in (select GameId from MatchOdds) order by sm.shortcode asc ";

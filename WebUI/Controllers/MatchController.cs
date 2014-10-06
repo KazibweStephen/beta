@@ -41,7 +41,7 @@ namespace WebUI.Controllers
             var currentSetNo = SetNumberGenerator.GetCurrentSetNumber;
             var games = await BetDatabase.ShortMatchCodes.Include(s => s.Match).OrderBy(x=>x.ShortCode).ToListAsync();
             var startTime = DateTime.Now;
-            
+
             var filteredgames = games.Select(g => new GameViewModel
             {
                 AwayScore = g.Match.AwayScore,
@@ -69,7 +69,7 @@ namespace WebUI.Controllers
                 SetNo = g.SetNo,
                 OldDateTime = g.Match.StartTime,
                 StartTime = String.Format("{0:dd/M/yyyy}", g.Match.StartTime)
-            }).Where(x => x.OldDateTime>startTime).OrderBy(s => s.StartTime); 
+            });//.Where(x => x.OldDateTime>startTime).OrderBy(s => s.StartTime); 
             return Json(filteredgames, JsonRequestBehavior.AllowGet);
          }
 
