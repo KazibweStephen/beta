@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RoleIndex</title>
+</head>
+<body>
+@{
+    ViewBag.Title = "Role Listing";
+
+}
+<p>&nbsp;</p>
+<div class="spacerBody">
+    @Html.ActionLink("Create New Role", "RoleCreate") | @Html.ActionLink("Roles", "RoleIndex")| @Html.ActionLink("Assign Roles", "RoleAddToUser")
+<h2>Role Index</h2>
+    <div class="table">
+        
+    
+@foreach (string s in Model)
+{
+    <div class="tr">
+        <div class="td">
+            @s
+        </div>
+        <div class="td">
+            <span onclick="return confirm('Are you sure to delete?')">
+        <a href="/Account/RoleDelete?RoleName=@s" class="delLink"><img src="/images/deleteicon.gif" alt="Delete" class="imgBorder0" /> Delete</a>
+                           </span>
+        </div>
+    </div>
+}
+        </div>
+</div
+</body>
+</html>

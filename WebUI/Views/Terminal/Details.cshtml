@@ -1,0 +1,43 @@
+﻿@model BettingApp.Models.Terminal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Terminal</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TerminalName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TerminalName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IpAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IpAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.isActive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isActive)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TerminalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "CashTransfer";
+    Layout = "~/Views/Shared/_BranchManager.cshtml";
+}
+<div ng-controller="transferController" ng-init="loadUsers()">
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-6">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+                        <div class="form-group input-group">
+
+                            <label class="control-label" for="typeahead">Teller Username </label>
+                            <div>
+                                <select ng-model="userName" class="form-control">
+                                    <option value="">-- Select Account --</option>
+                                    <option ng-repeat="c in Users" value="{{c.UserId }}">{{c.UserId}}</option>
+                                </select>
+                                <span class="field-validation-valid" data-valmsg-for="UnitTypeId" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>              
+                        <div class="checkbox">
+                            <input type="radio" ng-model="transType" value="FromAccount" id="a" data-ng-click="test()" />
+                            <label for="a">From Account</label>
+
+                        </div>
+                        <div class="checkbox">
+                            <input type="radio" id="c" ng-model="transType" value="ToAccount" data-ng-click="test()" />
+                            <label for="c">To Account</label>
+
+                        </div>
+                                <div class="form-group input-group">
+                                    <label class="control-label" for="typeahead">Transfer Amount </label>
+                                    <div>
+
+                                        <input type="text" class="form-control" id="amountid" data-provide="typeahead" ng-model="amount">
+
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary" ng-click="addTransfer()">Submit Payments</button>
+                                    <button type="reset" class="btn">Cancel</button>
+                                </div>
+                    </fieldset>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+    
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title"><i class="fa fa-warning warning"></i>  Please confirm</h3>
+        </div>
+        <div class="modal-body no-bottom-padding">
+            <div class="alert alert-warning">
+                    <span>You are about to transfer {{selected.AmountPaid | number}} UGX {{selected.TransType}} {{selected.UserId}}, would you like to continue?</span>
+               
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">Yes</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</div>
+
+<script src="~/Scripts/jscontrollers/transferController.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#yes').click(function (event) {
+            if (event.target.checked) {
+                $('#no').find('input').removeAttr('checked');
+            }
+        });
+        $('#no').click(function (event) {
+            if (event.target.checked) {
+                $('#yes').find('input').removeAttr('checked');
+            }
+        });
+    });
+</script>

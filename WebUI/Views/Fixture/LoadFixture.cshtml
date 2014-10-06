@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "LoadFixture";
+}
+
+<h2>LoadFixture</h2>
+<input type="button" value="LoadFixtures" onclick="LoadFixture()" />
+<script type="text/javascript">
+
+
+        function LoadFixture() {
+            alert("Step 1");
+            $.ajax({
+                url: '@Url.Action("LoadFixture", "Fixture")/' + reciept,
+                dataType: 'json',
+                type: 'GET'
+            }).done(function (data) {
+console.log("dddd")
+            })
+        }
+        
+
+
+
+   
+   
+
+</script>

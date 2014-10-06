@@ -1,0 +1,124 @@
+﻿ul.main-menu > li.active > a {
+    font-weight: 600;
+}
+
+ul.main-menu > li a {
+    color: #000;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-control {
+    height: 34px;
+    font-size: 14px;
+}
+
+.col-md-4, .col-sm-12, .col-md-3, .col-md-6 {
+    padding-left: 0;
+}
+
+.section-heading {
+    background-color: #246195;
+    color: #ffffff;
+    height: 30px;
+    vertical-align: middle;
+    font-weight: 300;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.small-section-heading {
+    background-color: #246195;
+    color: #ffffff;
+    height: 24px;
+    vertical-align: middle;
+    font-weight: 300;
+    padding: 6px;
+    font-size: 12px;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.custom-section {
+    border-top-width: 1px;
+    border-top-color: #cccccc;
+}
+
+
+.main-header {
+    margin-bottom: 5px;
+    padding-left: 0;
+}
+
+.main-header h2 {
+    padding-left: 0;
+}
+
+.content-wrapper {
+    padding-top: 5px;
+    padding-left: 0;
+}
+
+.control-label {
+    font-size: 10px;
+}
+
+.content-wrapper .content {
+    padding-left: 15px;
+}
+
+.bottom .container .content-wrapper {
+    background-color: #ffffff;
+}
+
+.dl-horizontal {
+    font-size: 14px;
+}
+
+.dl-horizontal dt {
+    text-align: left;
+    width: 260px;
+}
+
+.dl-horizontal dd {
+    padding-left: 10px;
+}
+
+.alert {
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+body {
+    font-size: 14px;
+}
+
+
+/* Re-styling the login box   */
+.login-box .form-control {
+    font-size: 14px;
+    height: 36px;
+}
+
+.login-box small {
+    font-size: 95%;
+}
+
+.full-page-wrapper .inner-page {
+    padding-top: 30px;
+}

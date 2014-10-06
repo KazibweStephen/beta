@@ -1,0 +1,62 @@
+﻿ @model Domain.Entities.Branch
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Branch</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BranchName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BranchName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BranchCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BranchCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaxCash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaxCash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.user.fname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.fname)
+    </div>
+
+ 
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

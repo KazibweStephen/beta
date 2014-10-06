@@ -1,0 +1,112 @@
+﻿@model Domain.Models.Concrete.Game
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayTeam.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeam.TeamName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTeam.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeam.TeamName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Champ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Champ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalfTimeHomeScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalfTimeHomeScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalfTimeAwayScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalfTimeAwayScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

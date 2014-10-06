@@ -1,0 +1,80 @@
+﻿
+
+
+
+@model Domain.Entities.Models.Terminal
+<link rel="stylesheet" href="@Url.Content("~/Vender/dist/assets/lib/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Vender/dist/assets/lib/jquery.gritter/css/jquery.gritter.css")">
+<link rel="stylesheet" href="@Url.Content("~/Vender/dist/assets/lib/jquery.uniform/themes/default/css/uniform.default.min.css")">
+<link rel="stylesheet" href="@Url.Content("~/Vender/dist/assets/lib/jasny-bootstrap/css/jasny-bootstrap.min.css")">
+ <link rel="stylesheet" href="@Url.Content("~/Vender/dist/assets/lib/validationEngine/css/validationEngine.jquery.css")">
+@{
+    ViewBag.Title = "Edit Terminal";
+}
+<style>
+    .form-control.col-lg-6 {
+        width: 50% !important;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box">
+            <header class="dark">
+                <div class="icons"><i class="fa fa-check"></i></div>
+                <h5>Edit</h5>
+                
+
+                <!-- .toolbar -->
+                <div class="toolbar">
+                    <nav style="padding: 8px;">
+                        <a href="javascript:;" class="btn btn-default btn-xs collapse-box">
+                            <i class="fa fa-minus"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-default btn-xs full-box">
+                            <i class="fa fa-expand"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-danger btn-xs close-box">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </nav>
+                </div>
+                <!-- /.toolbar -->
+            </header>
+
+            <div id="collapse2" class="body">
+                  @using (Html.BeginForm("Edit", "Terminal", FormMethod.Post, new { @class = "form-horizontal",id = "popup-validation", role = "form" }))
+                {
+                
+                    @*@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+<fieldset>
+        <legend>Student</legend>                   
+
+    *@
+                    @Html.HiddenFor(model => model.Terminalid)
+                    @Html.Partial("_CreateOrEdit", Model)
+                  }
+                </div>
+            </div>
+        </div>  <!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+@section scripts { 
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/validationEngine/js/jquery.validationEngine.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/validationEngine/js/languages/jquery.validationEngine-en.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/jquery-validation/dist/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/jquery-validation/src/localization/messages_ja.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/plupload/plupload.full.min.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/plupload/jquery.plupload.queue/jquery.plupload.queue.min.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/holderjs/holder.js")"></script>
+     <script src="@Url.Content("~/Vender/dist/assets/lib/jquery.gritter/js/jquery.gritter.min.js")"></script>
+     <script src="@Url.Content("~/Vender/dist/assets/lib/jasny-bootstrap/js/jasny-bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Vender/dist/assets/lib/jquery-form/jquery.form.js")"></script>
+     <script src="@Url.Content("~/Vender/dist/assets/lib/formwizard/jquery.form.wizard.js")"></script>
+    <script>
+        $(function () {
+            Metis.formValidation();
+        });
+    </script>
+}

@@ -1,0 +1,105 @@
+﻿<style type="text/css">
+    .col-lg-12, .col-md-8, .col-md-offset-11, .col-sm-1 {
+        padding-left: 0;
+    }
+
+    .livebet {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+    }
+
+    .badge-live {
+        font-size: 10px;
+        font-weight: bold;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #ffff00;
+        color: #000000;
+    }
+
+    table {
+        font-size: 12px;
+        background-color: #d4e4f3;
+        color: #000000;
+    }
+
+    thead {
+        border: 0;
+        border-color: #191970;
+        background-color: #191970;
+        color: #ffffff;
+    }
+
+    tbody > tr > td {
+        border-left: #cccccc solid 1px;
+    }
+
+    tr {
+        vertical-align: central;
+    }
+
+    .table-striped > tbody > tr:nth-child(odd) > td,
+    .table-striped > tbody > tr:nth-child(odd) > th {
+        background-color: #f2f7f9;
+    }
+
+    .selections-header {
+        background-color: #ffffff;
+    }
+
+    .odd, .moreodds {
+        font-weight: bold;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .oddCategory {
+        
+    }
+</style>
+<div id="maindiv">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <input type="button" class="btn btn-xs btn-success oddCategory" value="FT 1x2" data-bet-category="FT 1x2" />
+            <input type="button" class="btn btn-xs btn-primary oddCategory" value="FT U/O" data-bet-category="FT U/O" />
+            <input type="button" class="btn btn-xs btn-warning oddCategory" value="HT 1x2" data-bet-category="HT 1x2" />
+            <input type="button" class="btn btn-xs btn-danger oddCategory" value="HT U/O" data-bet-category="HT U/O" />
+            <input type="button" class="btn btn-xs btn-default oddCategory" value="Double Chance" data-bet-category="Double Chance" />
+            <input type="button" class="btn btn-xs btn-success oddCategory" value="Handicap" data-bet-category="Handicap" />
+            <input type="button" class="btn btn-xs btn-warning oddCategory" value="Both Teams To Score" data-bet-category="Both Teams To Score" />
+            <input type="button" class="btn btn-xs btn-primary oddCategory" value="First Team To Score" data-bet-category="First Team To Score" />
+            <input type="button" class="btn btn-xs btn-default oddCategory" value="Draw No Bet" data-bet-category="Draw No Bet" />
+      
+        </div>
+    </div>
+ 
+    <div class="col-lg-12">
+        <div class="col-md-8">
+            <table class="table-striped" id="oddstable">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody id="match">
+        
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4 selections-header">
+            
+            <div class="col-md-12">
+                <div class="col-sm-12">
+                    @{
+                        @Html.Partial("Receipt")
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+}

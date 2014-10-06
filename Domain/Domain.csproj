@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C47AC6E7-3B76-4661-A22F-474ADD356589}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Concrete\Account.cs" />
+    <Compile Include="Models\Concrete\ApplicationUser.cs" />
+    <Compile Include="Models\Concrete\BetCategory.cs" />
+    <Compile Include="Models\Concrete\BetOption.cs" />
+    <Compile Include="Models\Concrete\Branch.cs" />
+    <Compile Include="Models\Concrete\BranchType.cs" />
+    <Compile Include="Models\Concrete\CanceledReceipt.cs" />
+    <Compile Include="Models\Concrete\Company.cs" />
+    <Compile Include="Models\Concrete\Document.cs" />
+    <Compile Include="Models\Concrete\Match.cs" />
+    <Compile Include="Models\Concrete\Bet.cs" />
+    <Compile Include="Models\Concrete\League.cs" />
+    <Compile Include="Models\Concrete\MatchOdd.cs" />
+    <Compile Include="Models\Concrete\MatchTest.cs" />
+    <Compile Include="Models\Concrete\Receipt.cs" />
+    <Compile Include="Models\Concrete\ReceiptStatus.cs" />
+    <Compile Include="Models\Concrete\Result.cs" />
+    <Compile Include="Models\Concrete\Season.cs" />
+    <Compile Include="Models\Concrete\Shift.cs" />
+    <Compile Include="Models\Concrete\ShortMatchCode.cs" />
+    <Compile Include="Models\Concrete\Statement.cs" />
+    <Compile Include="Models\Concrete\Team.cs" />
+    <Compile Include="Models\Concrete\Country.cs" />
+    <Compile Include="Models\Concrete\Terminal.cs" />
+    <Compile Include="Models\ViewModels\AccountViewModels.cs" />
+    <Compile Include="Models\ViewModels\FixtureVm.cs" />
+    <Compile Include="Models\ViewModels\GameViewModel.cs" />
+    <Compile Include="Models\Concrete\Payment.cs" />
+    <Compile Include="Models\ViewModels\ManagerSummaryVM.cs" />
+    <Compile Include="Models\ViewModels\MatchOddsVM.cs" />
+    <Compile Include="Models\ViewModels\RecieptDetailsVm.cs" />
+    <Compile Include="Models\ViewModels\SummaryReportVm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

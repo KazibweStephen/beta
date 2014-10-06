@@ -1,0 +1,402 @@
+﻿<div id="app">
+   <style >
+
+       table {
+       
+       border-color:none;
+       }
+       tr {
+       border-color:none;
+       }
+.pull-right {
+  float: right !important;
+}
+
+       #rcpTreceiptTemplate{
+    font:1em  Arial,Helvetica, Geneva, sans-serif;
+    padding:0;
+    margin: 5px;
+    color: black;
+    background-color:whitesmoke;
+}
+#rcpTreceiptTemplate  tr.dashed-last{
+    border-bottom: 1px dashed #000000;
+}
+
+#rcpTmain{
+    margin: 1em auto;
+    min-width: 9em;
+    max-width: 30em;
+    border-radius: 4px;
+    border: 1px solid black;
+    /*box-shadow: 2px 2px 3px  rgba(0,0,0,0.6);*/
+    background-color:#ffffff;
+}
+
+
+.hidden{
+
+    display:none;
+}
+
+
+
+#rcpTorderDetails  div{
+    display: block;
+    border-bottom: none;
+    margin-bottom: 0.02em;
+    margin-bottom:1px;
+
+}
+
+#rcpTorderDetails  div label{
+    font-weight:bold;
+    width: 5em;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.8em;
+    margin-left: 10px;
+    padding-bottom:0;
+ 
+
+}
+
+#rcpTstakeSummary  label{
+    font-weight:bold;
+    width: 8em;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.8em;
+    margin-left: 10px;
+    vertical-align: top;
+   
+}
+
+#rcpTorderDetails  div span{
+    font-weight:normal!important;         
+    font-size: 0.8em!important;
+    vertical-align:top;
+    padding-bottom:0;
+
+}
+#rcpTstakeSummary  span{
+    font-weight:bold!important;         
+    font-size: 0.8em!important;
+    margin-right:10px;
+
+}
+#rcpTsummaries{
+    border-top: none;
+}
+#rcpTsummaries div{
+    border-top: none;
+    border-bottom: none;
+}
+
+#rcpTbarCode,#rcpTbarCode img{
+    display: block;
+
+    min-height: 3em;
+    max-height: 4em;
+    margin-top:0.05em;
+    margin-bottom:-25px;
+    max-width: 200px;
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+     
+  
+}
+#rcpTlogo{
+    min-height: 3em;
+    max-height: 4em;
+    
+    margin-top:-15px;
+
+}
+#rcpTlogo img,#rcpTbarCode img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+       #rcpTbarCode span.caption {
+           display: table;
+        margin-left: auto;
+    margin-right: auto;
+    margin-top:15px;
+           
+       }   
+#rcpTbetList .bet span/*:not(:first-child)*/{
+    margin-left: 0.25em;
+
+
+}
+#rcpTbetList .bet span{
+
+    font-size:0.9em;
+    line-height: 1.2em;
+
+}
+
+#rcpTbetList .bet span.fixture{
+
+    margin-left:1.65em;
+    
+
+}
+    #rcpTbetList .bet span.fixtureOption {
+         margin-left:2.65em;
+       }
+     #rcpTbetList .bet span.match-code {
+        /*margin-right:0.05em;*/
+       }
+    
+       #rcpTbetList {
+       width:98%;
+       background-color:#ffffff;
+       }
+
+       tbody > tr > td {
+        border-left:none;
+        padding-bottom:0;
+        padding-top:0;
+        margin:0;
+    }
+
+
+     
+        tbody > tr {
+       
+       margin:0;}
+
+     tbody>  tr.match-summary>td {
+            border-bottom: 1px black dashed!important;
+        }
+
+    tbody>  tr.match-summary>td.match-code{
+        vertical-align:top;
+    }
+   </style>
+   
+    <header></header>
+    <div id="main">
+        <div class="search">
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="search for a match" />
+            <input type="button" value="Go" />
+        </div>
+        <!--The error display has been here-->
+
+        <div id="selection-summary" class="info">
+            <span class="number-of-selections">0   </span>
+            <span class="bet-amount">Ugx 0</span>
+            <span class="total-odds">2.85</span>
+        </div>
+
+        <ul id="betList">
+
+        </ul>
+        <ul id="multiple-bet-template">
+
+            <li class="bet">
+
+                <div class="multiple-bet">
+                    <span class="currency badge btn-default" data-field="betCurrency">&#8721;</span>
+                    <div id="multipleBetLeft" class="pull-right">
+                        <span class="multiple-bet-no badge btn-success" data-field="multipleBetNo">1=</span>
+                        <input data-a-sep="," type="text" id="multipleBetAmount" class="multipleBetAmount money" data-field="multipleBetAmount" placeholder="Multiples Amount" />
+                        <span class="total-odds badge btn-info" data-field="TotalOdd"></span>
+                        <button class="delete">X</button>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+        <div id="stakeSummary" class="stake-summary info">
+            <span class="stake-text">Total Stake 0 lines</span>
+            <span class="total-pay pull-right"></span>
+        </div>
+        <div id="totalPaySummary" class="total-pay-summary info ">
+            <span class="total-pay-text">Gross Pay</span>
+            <span class="total-pay pull-right"></span>
+        </div>
+        <div id="taxSummary" class="tax-summary info ">
+            <span class="tax-text">Tax(-15%) </span>
+            <span class="tax pull-right"></span>
+        </div>
+        <div id="bonusSummary" class="bonus-summary info ">
+            <span class="bonus-text">Bonus(+5%) </span>
+            <span class="bonus pull-right"></span>
+        </div>
+
+        <div id="maxPayout" class="max-payout info">
+            <span style=" font-weight:bolder;">Net Pay</span>
+            <span class="max-payout-amount pull-right" style=" font-weight:bolder ;border-bottom: 1px solid black;border-top: 1px double  black">0</span>
+
+        </div>
+        
+        <!-- set up the modal to start hidden and fade in and out -->
+        <!--
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        Hello world!
+                    </div>
+                    
+                    <div class="modal-footer"><button type="button" id="myButton" class="btn btn-primary">OK</button></div>
+                </div>
+            </div>
+        </div>
+        -->
+            <div id="errors" class="alert alert-error blink hidden">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+            </div>
+            
+        <div id="controlButtons" class="control-buttons">
+            <input class="print-receipt btn btn-sm btn-success" type="button" value="Print Receipt" />
+            <input class="cancel-receipt btn btn-sm btn-danger pull-right" type="button" value="Cancel Receipt" />
+        </div>
+    </div>
+    <div id="templates" class="hidden">
+        <ul id="bet-template">
+
+            <li class="bet">
+                <span class="match-code" data-field="matchId"></span>
+                <span class="match-name " data-field="teamVersus"></span>
+                <div class="match-summary">
+                    <span class="fixture  " data-field="betCategory"></span>
+                    <span class="fixtureOption badge btn-success" data-field="optionName"></span>
+                    <input data-a-sep="," type="text" id="amountBet" class="money hidden" data-field="betAmount" placeholder="amount" disabled/>
+                    <span class="betted-odd badge btn-info" data-field="odd"></span>                   
+                </div>
+                <button class="delete">X</button>
+            </li>
+
+
+        </ul>
+    </div>
+
+ 
+    <div id="rcpTreceiptTemplate" class="hidden">
+
+        <div id="rcpTmain" class="">
+            <div id="rcpTlogo" class="logo col-lg-12">
+
+                <img src="../Content/Images/betway2.png" alt="Bet Way" />
+ 
+                
+            </div>
+            <div id="rcpTorderDetails" class="col-md-12" style="border-bottom:1px dashed black;">
+                <div>
+                    <label for=" rcptorderid">
+                Ticket Id:</label>
+                <span id="rcpTorderId"></span>
+            </div>
+                <div>
+                    <label for="rcpTtimeOfBet">Bet Time:</label>
+                    <span id="rcpTtimeOfBet"></span>
+                </div>
+                <div>
+                    <label for="rcpTbranch">Branch:</label>
+                    <span id="rcpTbranch">Kawempe</span>
+                </div>
+                <div>
+                    <label for="rcpTteller">Teller:</label>
+                    <span id="rcpTteller">Stephen</span>
+                </div>
+            </div>
+            <div id="rcpTbetdetails">
+                <table class="table " id="rcpTbetList" style=" font-family:'Arial Rounded MT'; font-size:2.3em;font-weight:normal ">
+
+                </table>
+            </div>
+            <div id="rcpTsummaries">
+                <div id="rcpTstakeSummary" class="stake-summary info">
+                    <div>
+                        <label for="rcpTNoSelections"> Total Bets:</label> <span id="rcpTNoSelections" class="total-odds pull-right"></span>
+                    </div>
+                    <div>
+                        <label for="rcpTtotalOdd"> Total Odds:</label> <span id="rcpTtotalOdd" class="total-odds pull-right"></span>
+                    </div>
+                    
+                   
+                    <div>
+                        <label for="rcpTtotalStake">Total Stake:</label><span id="rcpTtotalStake" class="total-stake-text pull-right "></span>
+                    </div>
+
+                    <div>
+                        <label for="rcpTtotalPayout"> Gross Pay:</label> <span id="rcpTtotalPayout" class="total-pay pull-right"></span>
+                    </div>
+                    <div >
+                        <label for="rcpTtotaltax"> Tax(-15%):</label><span id="rcpTtotaltax" class="total-tax pull-right"></span>
+                    </div>
+                    <div>
+                        <label for="rcpTbonus"> Bonus(+5%):</label><span id="rcpTbonus" class="total-bonus pull-right"></span>
+                    </div>
+                    <div>
+                        <label for="rcpTmaxPayout" style=" font-weight:bolder;"> Net Pay:</label> <span id="rcpTmaxPayout" class="total-pay pull-right" style=" font-weight:bolder;border-bottom: 1px solid black;border-top: 1px solid black">12356</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="rcpTbarCode" class="thumbnail">
+                
+                <img src=""   alt="">
+                <span id="rcpTorderId" class="caption"></span>
+               
+            </div>
+
+        </div>
+    </div>
+
+    <div id="rcpTtemplates" class="hidden">
+        <table id="rcpTbet-template" class="table ">
+            <tbody class="bet">
+                <tr class="bet-content dashed-first receipt" style="font-size:0.35em">
+                    <td rowspan="3" class="match-code " data-field="matchId" style="vertical-align:top;border-bottom:1px dashed black;">1234</td>
+                    
+                    <td colspan="3" class="match-name " data-field="teamVersus">Arsenal vs Manchester United</td>
+                </tr>
+                <tr class="match-time receipt" style="font-size:0.270em">
+                    <td class="date" data-field="startTime">
+
+                        <!--<span class="match-matchTime" data-field="startTime">17:00</span>-->
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="match-summary dashed-last receipt" style="border-bottom:1px dashed black; font-size:0.32em;">
+                    <td class="fixture hidden" data-field="betCategory">Double Chance Under over</td>
+                    <td></td>
+                    <td class="fixtureOption " data-field="optionName">Even X2</td>
+                    <td class="bet-amount hidden" id="rcpTamountBet" data-field="betAmount">Ugx 10000</td>
+                    <td class="betted-odd " data-field="odd">1.23</td>
+
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+
+
+
+
+
+
+        <footer></footer>
+    </div>
+
+
+
+
+
+

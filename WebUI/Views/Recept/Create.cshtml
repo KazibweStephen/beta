@@ -1,0 +1,103 @@
+﻿@model Domain.Entities.Receipt
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Manager.cshtml";
+}
+<script src="~/Scripts/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript">
+    
+  
+</script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#ajaxUploadForm").ajaxForm({
+                    target: "#ajaxUploadForm",
+                    iframe: true,
+                    dataType: "json",
+                    beforeSubmit: function () {
+                    },
+                    success: function (result) {                   
+                        alert(result);                  
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                    }
+                });
+            });
+	</script> 
+<form id="ajaxUploadForm" action="@Url.Action("AjaxUpload", "Recept")" method="post" enctype="multipart/form-data">   
+     <fieldset>
+        
+
+        <div class="editor-label">
+            <label for="userid">userid</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="userid" name="BetData" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="userid" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="betdate">betdate</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" data-val="true" data-val-date="The field betdate must be a date." id="betdate" name="betdate" type="datetime" value="" />
+            <span class="field-validation-valid" data-valmsg-for="betdate" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="betmoney">betmoney</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" data-val="true" name="stake" data-val-number="The field betmoney must be a number." id="betmoney" name="betmoney" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="betmoney" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="setodd">setodd</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" name="odd" data-val="true" data-val-number="The field setodd must be a number." id="setodd" name="setodd" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="setodd" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="setsize">setsize</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" data-val="true" name="RecieptSize" data-val-number="The field setsize must be a number." id="setsize" name="setsize" type="number" value="" />     
+               <span class="field-validation-valid" data-valmsg-for="setsize" data-valmsg-replace="true"></span>
+        </div>
+         <div>
+             	<ol class="last">
+				<li>
+					<label>upload </label>
+					<input  type="file" id="fileInput" name="file" style="width:317px" />
+				</li>
+              
+				<li>
+					
+				</li>
+			</ol>  
+         </div>
+        <div class="editor-field">
+            <select id="BranchId" name="BranchId"><option value=""></option>
+<option value="1">Kawempe</option>
+</select>
+            <span class="field-validation-valid" data-valmsg-for="BranchId" data-valmsg-replace="true"></span>
+        </div>
+
+        <p>
+       <input  class="btn btn-primary" id="ajaxUploadButton" type="submit" value="Upload" />
+        </p>
+    </fieldset>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+
+

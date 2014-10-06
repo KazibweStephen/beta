@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Payments";
+    Layout = "~/Views/Shared/_BranchManager.cshtml";
+
+}
+
+<h3>Winner Payments</h3>
+
+<div id="page-wrapper">
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center v-center">
+
+
+            <p class="lead">Enter Receipt Number</p>
+
+
+            <form class="col-lg-12">
+                <div class="input-group" style="width: 340px; text-align: center; margin: 0 auto;" id='container'>
+                    <input class="form-control input-lg" title="Confidential signup."
+                           placeholder="Enter Reciept Number" id="RecNum"  type="text"/>
+                    <span class="input-group-btn">
+                        <button class='btn btn-lg btn-primary click' id="btnPopup" type="button">OK</button>
+                    </span>
+
+                </div>
+                <span class="error">RecieptNumber required</span>
+            </form>
+        </div>
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/jquery-ui.js"></script>
+        <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+        <script type="text/javascript">     
+            $("[id*=btnPopup]").live("click", function () {
+                var reciept = $("input#RecNum").val();
+                $.ajax({
+                    url: '@Url.Action("RecieptData", "Recept")/' + reciept,
+                    dataType: 'json',
+                    type: 'GET'
+                }).done(function (data) {  //excluding the first row because those are column titles
+                  
+                    var dt = '';
+                    
+                    dt = '<table width="600" class="receiptData" >';
+                   // alert("out");
+                  dt+=('' +
+                        '<th colspan="2"><b>Ticket ID: '+reciept+'</b></th>');
+                    //   alert(dt);
+                  var status = "";
+                  var betmoney = 0;
+                  var setodd = 0;
+                  var loop = 0;
+                  var winAmount = 0;
+                 
+                  for (var i in data) {
+                      status = data[i].status;
+                      //   $('.status:contains("Won")').css('color', 'red');
+                      winAmount = data[i].WonAmount;
+                      loop += 1;
+                      if (loop == 1) {
+                          dt += (
+               '<tr>' +
+                '<td   colspan="2" >Stake:' + data[i].BetMoney + '</td>' + '</tr><tr>' +
+                    '<td  data-field="matchId" class="match-code">Status:' + data[i].status + '</td>' + '</tr><tr>' +
+                   
+                 '<td> TotalOdd:' + data[i].SetOdd + '</td>' +
+                   '</tr>   <tr>' +        
+                    '<td  data-field="matchId" class="match-code status">Status:' + data[i].status + '</td></tr>' +
+                   '<tr><td colspan="2">-------------------------<td></tr>'
+                      );
+                      }
+                      dt+=(
+                '<tr class="match" id="' + data[i].id + '">' +
+                 '<td  data-field="matchId" class="match-code" colspan="2" >' + data[i].team + '</td>' + '</tr><tr>' +
+          
+                  '<td  data-field="betmoney" class="match-code"> ' + data[i].choice + '</td>' +
+                              '<td  data-field="betmoney" class="match-code"> ' + data[i].Scores + '</td>' +
+                    
+                                    
+                    '</tr>'+
+                    '<tr><td colspan="2">-----------------------<td></tr>'
+
+                    );
+                      
+                  }
+              
+                  dt += ('</table>');
+                   winAmount = 0;
+                    // alert(dt);
+                 
+                    if (status == "Won") {
+                 
+                        dt += ' <label  id="ticketid" data-odd-type="1">'+1000+'</label>';
+                        dt += '<input id="payreciept" type="button" class="btn btn-success btn-xs odd" value="PayReciept" data-odd-type="1" />';
+                        dt += ' <input class="form-control"   id="Reciept" value=' + reciept + ' type="text">';
+                    }
+                    $("#dialog").html(dt);
+                    // original data from the server
+                    games = data;
+                  //  console.log(games);
+                    $("#dialog").dialog({
+                        title: "Reciept Details",
+                        buttons: {
+                            Close: function () {
+                                $(this).dialog('close');
+                              
+                            },
+                        }
+                    });
+                 
+                })
+                
+                return false;
+            });
+            function ToJavaScriptDate(value) {
+                var pattern = /Date\(([^)]+)\)/;
+                var results = pattern.exec(value);
+                var dt = new Date(parseFloat(results[1]));
+                if (dt.getHours < 12) {
+                    return (dt.getHours() + ':' + dt.getMinutes() + ' AM');
+                } else {
+                    return (dt.getHours() - 12 + ':' + dt.getMinutes() + ' PM');
+                }
+            }
+            $("[id*=payreciept]").live("click", function () {
+                var recieptid = $("#ticketid").val();
+                alert(recieptid);
+                $.ajax({
+                    url: '@Url.Action("PayReciept", "Recept")/' + recieptid,
+                    dataType: 'json',
+                    type: 'GET'
+                }).done(function (data) {
+                    window.location.reload();
+                    $("#dialog").hide(20);
+                    //  location.reload();
+                    alert("back");
+                })
+
+            })
+       
+        </script>
+      
+    
+        <div id="dialog" style="display: none; width:1000px; ">
+          Reciept Details
+        </div>
+
+     
+    </div>
+</div>

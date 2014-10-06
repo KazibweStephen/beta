@@ -1,0 +1,38 @@
+﻿@model Domain.Entities.Models.Terminal
+      @if (ViewBag.branchId != null)
+      { 
+      <div class="form-group">
+                        <label for="Terminal.BranchName" class="control-label col-lg-4">Terminal Name:</label>
+                        <div class="col-lg-4">
+                            <input type="text" value="@Model.Branch.BranchName" class="validate[required] form-control" name="Terminal.BranchName" id="Terminal.BranchName">
+                        </div>
+                    </div>
+      
+      }
+
+                    <div class="form-group">
+                        <label for="TerminalName" class="control-label col-lg-4">Terminal Name:</label>
+                        <div class="col-lg-4">
+                            <input type="text" value="@Model.TerminalName" class="validate[required] form-control" name="TerminalName" id="TerminalName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="IpAddress" class="control-label col-lg-4">Ip Address:</label>
+                        <div class="col-lg-4">
+                            <input type="text" value="@Model.IPAddress" class="validate[required] form-control" name="IpAddress" id="IpAddress">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="DateCreated" class="control-label col-lg-4">Date Created</label>
+                        <div class="col-lg-4">
+                            <input value="@Model.DateCreated" type="date" id="DateCreated" name="DateCreated" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-actions no-margin-bottom">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                          @Html.ActionLink("Back to List", "Index")
+                    </div>
+
+               
+
+

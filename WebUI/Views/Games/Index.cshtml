@@ -1,0 +1,245 @@
+﻿@model IEnumerable<Domain.Models.Concrete.Match>
+
+<style type="text/css">
+    .col-lg-12, .col-md-8, .col-md-offset-11, .col-sm-1 {
+        padding-left: 0;
+    }
+
+    .livebet {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+    }
+
+    .badge-live {
+        font-size: 10px;
+        font-weight: bold;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #ffff00;
+        color: #000000;
+    }
+
+    table {
+        font-size: 12px;
+        background-color: #d4e4f3;
+        color: #000000;
+    }
+
+    thead {
+        border: 0;
+        border-color: #191970;
+        background-color: #191970;
+        color: #ffffff;
+    }
+
+    tbody > tr > td {
+        border-left: #cccccc solid 1px;
+    }
+
+    tr {
+        vertical-align: central;
+    }
+
+    .table-striped > tbody > tr:nth-child(odd) > td,
+    .table-striped > tbody > tr:nth-child(odd) > th {
+        background-color: #f2f7f9;
+    }
+
+    .selections-header {
+        background-color: #ffffff;
+    }
+
+    .odd, .moreodds {
+        font-weight: bold;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+</style>
+
+<div id="maindiv">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <input type="button" class="btn btn-xs btn-success oddCategory" value="FT 1x2" data-bet-category="FT 1x2" />
+            <input type="button" class="btn btn-xs btn-primary oddCategory" value="FT U/O" data-bet-category="FT U/O" />
+            <input type="button" class="btn btn-xs btn-warning oddCategory" value="HT 1x2" data-bet-category="HT 1x2" />
+            <input type="button" class="btn btn-xs btn-danger oddCategory" value="HT Under/Over" data-bet-category="HT Under/Over" />
+            <input type="button" class="btn btn-xs btn-default oddCategory" value="Double Chance" data-bet-category="Double Chance" />
+            <input type="button" class="btn btn-xs btn-success oddCategory" value="Handicap" data-bet-category="Handicap" />
+            <input type="button" class="btn btn-xs btn-warning oddCategory" value="Both Teams To Score" data-bet-category="Both Team To Score" />
+            <input type="button" class="btn btn-xs btn-primary oddCategory" value="First Team To Score" data-bet-category="First Team To Score" />
+            <input type="button" class="btn btn-xs btn-default oddCategory" value="Draw No Bet" data-bet-category="Draw No Bet" onclick="getBetCategoryOddTypes()" />
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-md-8">
+            <div class="col-sm-offset-11 col-sm-1">
+                <input type="button" class="btn btn-danger btn-sm" value="More >>" id="morebtn" />
+            </div>
+        </div>
+    </div>
+<div class="col-md-8">
+    <table class="table-striped" id="oddstable">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody id="match"></tbody>
+    </table>
+</div>
+<div class="col-lg-4 selections-header">
+    <div class="col-md-12">
+        <div class="col-sm-12">
+            @{
+                @Html.Partial("Receipt");
+            }
+        </div>
+        <!--<div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>-->
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-success">
+                                FT 1x2
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="1" />1.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="x" />2.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="2" />1.69</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-primary">
+                                FT U/O 2.5
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="Under" />1.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="Over" />2.03</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-warning">
+                                HT 1x2
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="HT1" />1.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="HTx" />2.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="HT2" />1.69</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-danger">
+                                HT U/O 2.5
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="HTU2.5" />1.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="HTO2.5" />2.03</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-default">
+                                Double Chance
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="FT1x" />1.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="FT12" />2.03</span>
+                            </div>
+                            <div class="col-sm-12">
+                                <span><input type="checkbox" data-odd-option="FTx2" />1.69</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="col-sm-12 btn-success">
+                                Handicap
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    
+</div>
+@section scripts
+{
+    <script>
+                //  Moved coder to renderTables.js function in "/Scripts/app folder"
+
+        </script>
+}
+
+<!--
+    // kept data
+
+    //single out unique games
+    //$.each(data, function(index, item) {
+    //    inMatchCodes.push(item.MatchNo);
+    //});
+
+    //console.log(JSON.stringify(inMatchCodes));
+    //var MatchCodes = $.unique(inMatchCodes.sort());
+    //console.log(JSON.stringify(MatchCodes));
+
+    //$.each(MatchCodes, function(index, item) {
+    //    var match =
+    //    {
+    //        MatchCode: item,
+    //        odds: []
+    //    };
+    //    matches.push(match);
+    //    $.each(games, function(key, value) {
+    //        if (value.MatchNo == match.MatchCode) {
+    //            match.setno = value.SetNo;
+    //            match.starttime = value.StartTime;
+    //            match.hometeamid = value.HomeTeamId;
+    //            match.hometeamname = value.HomeTeamName;
+    //            match.homescore = value.HomeScore;
+    //            match.halftimehomescore = value.HalfTimeHomeScore;
+    //            match.awayteamid = value.AwayTeamId;
+    //            match.awayteamname = value.AwayTeamName;
+    //            match.awayscore = value.AwayScore;
+    //            match.halftimeawayscore = value.HalfTimeAwayScore;
+    //            var odd =
+    //            {
+    //                option: value.Option,
+    //                category: value.Category,
+    //                categoryid: value.CategoryId,
+    //                oddvalue: value.Odd
+    //            };
+    //            match.odds.push(odd);
+    //        }
+    //    });
+
+    //});
+    -->

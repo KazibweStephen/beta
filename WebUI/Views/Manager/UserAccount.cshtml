@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "UserAccount";
+    Layout = "~/Views/Shared/_BranchManager.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Statements @ViewBag.User
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+             
+
+                <div class="table-responsive" ng-controller="userStatementController" ng-init="loadReciepts('@ViewBag.User')">
+                    <table class="table table-bordered">
+                        <thead><tr> 
+                              <td>Transaction </td>
+                             <td>Amount</td>  
+                             <td>Date</td>             
+                            <td>Comment</td>
+                            </tr></thead>
+                        <tbody>
+                            <tr ng-repeat="stmt in statements">
+                                <td ng-bind="stmt.Transcation"></td>
+                                <td ng-bind="stmt.Amount|number"></td>
+                                <td ng-bind="stmt.stmtDate"></td>
+                                <td>{{stmt.Comment}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="~/Scripts/jscontrollers/userStatementController.js"></script>

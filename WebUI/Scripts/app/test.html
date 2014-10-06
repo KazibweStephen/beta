@@ -1,0 +1,77 @@
+﻿<div class="print" id="rcpTreceiptTemplate" class="hidden">
+
+    <div class="print" id="rcpTmain">
+        <div class="print" id="rcpTlogo" class="logo">
+            <img src="images/betway.jpg" alt="Bet Way">
+        </div>
+        <div class="print" id="rcpTorderDetails">
+            <div class="print">
+                <label for="rcpTorderId">Order Id:</label>
+                <span id="rcpTorderId">1235</span>
+            </div>
+            <div class="print">
+                <label for="rcpTtimeOfBet">Bet Time:</label>
+                <span id="rcpTtimeOfBet">12:23pm</span>
+            </div>
+            <div class="print">
+                <label for="rcpTbranch">Branch:</label>
+                <span id="rcpTbranch">Kawempe</span>
+            </div>
+            <div class="print">
+                <label for="rcpTteller">Teller:</label>
+                <span id="rcpTteller">Stephen</span>
+            </div>
+        </div>
+        <div class="print" id="rcpTbetdetails">
+            <ul id="rcpTbetList"></ul>
+        </div>
+        <div class="print" id="rcpTsummaries">
+            <div class="print" id="rcpTstakeSummary" class="stake-summary info">
+                <div class="print">
+                    <label for="rcpTNoSelections"> #Selections:</label> <span id="rcpTNoSelections" class="total-odds">2.85</span>
+                </div>
+                <div class="print">
+                    <label for="rcpTtotalOdd"> Total Odd:</label> <span id="rcpTtotalOdd" class="total-odds">2.85</span>
+                </div>
+                <div class="print">
+                    <label for="rcpTtotalStake">Total Stake:</label><span id="rcpTtotalStake" class="stake-text">2356</span>
+                </div>
+                <div class="print">
+                    <label for="rcpTtotaltax"> Total Tax:</label><span id="rcpTtotaltax" class="total-tax pull-right">231</span>
+                </div>
+                <div class="print">
+                    <label for="rcpTtotalPayout"> Total Payout:</label> <span id="rcpTtotalPayout" class="total-pay pull-right">5678</span>
+                </div>
+                <div class="print">
+                    <label for="rcpTmaxPayout"> Max Payout:</label> <span id="rcpTmaxPayout" class="total-pay pull-right">12356</span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="print" id="rcpTbarCode">
+            <img src="images/barcode.bmp" alt="Barcode and Serial No">
+        </div>
+
+    </div>
+
+    <div class="print" id="rcpTtemplates" class="hidden">
+        <ul id="rcpTbet-template">
+
+            <li class="bet">
+                <span class="match-code" data-field="matchId">Match 1234</span>
+                <span class="match-name" data-field="teamVersus">Arsenal vs Man U</span>
+                <div class="print" class="match-summary">
+                    <span class="fixture badge btn-default" data-field="betCategory">FT 1 X 2</span>
+                    <span class="fixtureOption badge btn-success" data-field="optionName">1</span>
+                    <span class="bet-amount" id="rcpTamountBet" data-field="betAmount">Ugx 10000</span>
+                    <span class="betted-odd badge btn-info" data-field="odd">1.23</span>
+
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RoleCreate</title>
+</head>
+<body>
+    <div>
+        @{
+    ViewBag.Title = "RoleCreate";
+
+}
+<div class="spacerBody">
+    <p>&nbsp;</p>
+    @Html.ActionLink("Create New Role", "Register") |  @Html.ActionLink("Create New Role", "RoleCreate") | @Html.ActionLink("Roles", "RoleIndex")| @Html.ActionLink("Assign Roles", "RoleAddToUser")
+<h2>Role Create</h2>
+
+@using(Html.BeginForm()){
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div>
+    Role name</div>
+    <p>
+        @Html.TextBox("RoleName")
+    </p>
+    <input type="submit" value="Save" />
+}
+    </div>
+    </div>
+</body>
+</html>

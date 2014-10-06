@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie ie9" lang="en" class="no-js"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en" class="no-js" ng-app>
+ <!--<![endif]-->
+<head>
+    <title>BET</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- CSS -->
+    
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/FontAwesome")
+    @Styles.Render("~/Content/main")
+    <link href="~/Content/receipt.css" rel="stylesheet" />
+    <link href="~/Content/printReceipt.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- WRAPPER -->
+    <div class="wrapper">
+        <!-- TOP BAR -->
+        <div class="top-bar navbar-fixed-top" style="margin-bottom: 52px;">
+            <div class="container">
+                <div class="row">
+                    <!-- logo -->
+                    
+                    <div class="col-md-4 logo">
+                            <a href="#"><img src="~/Content/Images/betway1.png" height="50px" width="100px" /></a>
+                            <h1 class="sr-only">BETWAY Sports Betting</h1>
+                        </div>@**@
+                    <!-- end logo -->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 logo">
+                                <div class=""><span id="tellerBalance" class="badge btn-large btn-primary pull-right">Balance: @ViewBag.Balance</span></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="top-bar-right">
+                                    Hello, 
+                                    <!-- logged user and the menu -->
+                                    <div class="logged-user">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-user">@User.Identity.Name
+                                                </i>
+                                                <span class="name"></span> <span class="caret"></span>
+                                            </a>                      
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <span class="text">
+                                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                                                }
+                                            </span>
+
+                                        </div>
+                                        
+                                    </div>
+                                
+                                    <!-- end logged user and the menu -->
+                                </div><!-- /top-bar-right -->
+                            </div>
+                        </div><!-- /row -->
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </div><!-- /top -->
+        <!-- BOTTOM: LEFT NAV AND RIGHT MAIN CONTENT -->
+        <div class="bottom" style="margin-top: 52px">
+            <div class="container">
+                <div class="row">
+                    @*<!-- left sidebar -->
+                    <div class="col-md-2 left-sidebar">
+                        <!-- main-nav -->
+                        @*<nav class="main-nav">
+                            <ul class="main-menu">
+                                <li class="active"><a href="#"><i class="fa fa-dashboard fa-fw"></i><span class="text">Dashboard</span></a></li>
+                                <li class="active">
+                                    <a href="#" class="js-sub-menu-toggle">
+                                        <i class="fa fa-lock fa-fw"></i><span class="text">Account Management</span>
+                                        <i class="toggle-icon fa fa-angle-left"></i>
+                                    </a>
+                                    <ul class="sub-menu open">
+                                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <li><a href="javascript:document.getElementById('logoutForm').submit()"><span class="text">Log off</span></a></li>
+                                        }
+                                        <li><a href='@Url.Action("Manage", "Account")'><span class="text">Manage Account</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="js-sub-menu-toggle">
+                                        <i class="fa fa-user fa-fw"></i><span class="text">Profile Management</span>
+                                        <i class="toggle-icon fa fa-angle-left"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href='#'><span class="text">Basic Information</span></a></li>
+                                        <li><a href="#"><span class="text">Bank Account</span></a></li>
+                                        <li><a href='#'><span class="text">Academic Qualifications</span></a></li>
+                                        <li><a href="#"><span class="text">Employment History</span></a></li>
+                                        <li><a href="#"><span class="text">Emergency Contact</span></a></li>
+                                        <li><a href="#"><span class="text">Parents Information</span></a></li>
+                                        <li><a href="#"><span class="text">Spouse Information</span></a></li>
+                                        <li><a href="#"><span class="text">Biological Children</span></a></li>
+                                        <li><a href="#"><span class="text">Siblings</span></a></li>
+                                    </ul>
+                                </li>
+                                @if (User.IsInRole("Administrator"))
+                                {
+                                    <li class="active">
+                                        <a href="#" class="js-sub-menu-toggle">
+                                            <i class="fa fa-cogs fa-fw"></i><span class="text">System Administrator</span>
+                                            <i class="toggle-icon fa fa-angle-left"></i>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href='@Url.Action("Index","Organization")'><span class="text">Organizations List</span></a></li>
+                                            <li><a href='@Url.Action("Index", "Account")'><span class="text">Employee Accounts List</span></a></li>
+                                            <li><a href='@Url.Action("Register", "Account")'><span class="text">Register User Account</span></a></li>
+                                            <li><a href='@Url.Action("Create", "Organization")'><span class="text">Register Organization</span></a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                @if (User.IsInRole("HumanResource"))
+                                {
+                                    <li>
+                                        <a href="#" class="js-sub-menu-toggle">
+                                            <i class="fa fa-bar-chart-o"></i><span class="text">HR Functions</span>
+                                            <i class="toggle-icon fa fa-angle-left"></i>
+                                        </a>
+                                        <ul class="sub-menu ">
+                                            <li><a href='@Url.Action("Create", "Employee")'><span class="text">Register User</span></a></li>
+                                            <li><a href='@Url.Action("DummyCreate", "Employee")'><span class="text">Register User 2</span></a></li>
+                                            <li><a href='@Url.Action("Index", "EmployeeBankDetails")'><span class="text">Bank Accounts</span></a></li>
+                                        </ul>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- content-wrapper -->*@
+                    <div class="col-md-12 content-wrapper">
+                        <div class="content">
+                            @*<div class="main-header">
+                                <h2>@ViewBag.PageTitle</h2>
+                                <em>@ViewBag.PageSubTitle</em>
+                            </div>*@
+                            <div class="main-content" style="border-radius: 8px;border-bottom:1px solid darkblue">
+                                @RenderBody()
+                            </div><!-- /main-content -->
+                        </div><!-- /main -->
+                    </div><!-- /content-wrapper -->
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </div>
+        <!-- END BOTTOM: LEFT NAV AND RIGHT MAIN CONTENT -->
+        <div class="push-sticky-footer"></div>
+    </div><!-- /wrapper -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        &copy; @DateTime.Now.Year BETWAY
+    </footer>
+    <!-- END FOOTER -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/common")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/app/renderTables.js"></script>
+    <script src="~/Scripts/app/receipt.js"></script>
+    <script src="~/Scripts/app/bet.js"></script>
+    <script src="~/Scripts/app/receiptSender.js"></script>
+    <script src="~/Scripts/app/printExt.js"></script>
+    <script src="~/Scripts/app/receiptGen.js"></script>
+    <script src="~/Scripts/app/autoNumeric.js"></script><!---->
+   
+   
+</body>
+</html>

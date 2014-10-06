@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "SummaryReport";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12" ng-controller="summaryReportController" ng-init="loadSummary()">
+        <h1><small>SummaryReport</small></h1>
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <table class="table">
+                <thead><tr>
+                    <td>Business Day</td>
+                    <td>Ticket Sales</td>
+                    <td>Deposits</td>
+                    <td>Total Sales</td>
+                    <td>Ticket Payments</td>
+                    <td>WithDraws</td>
+                    <td>Total Payments</td>
+                    <td>Cash</td>
+                    <td>Total Winnings</td>
+                    <td>Total OutStanding Winnings</td>
+                    <td>Profits</td>
+                    <td>Cancelled Tickets</td>
+                    </tr></thead>
+                <tbody>
+                    <tr ng-repeat="item in Summary">
+                        <td>{{item.BusinessDay}}</td>
+                        <td>
+                            <a href="~/Admin/TicketSales/{{item.Sales|number}}"><i class="icon-eye-open">{{item.Sales|number}}</i></a>({{item.TicketSold}})
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>{{item.PaidOrders|number}}({{item.TicketsPaid}})</td>
+                        <td>0</td>
+                        <td>{{item.PaidOrders|number}}</td>
+                        <td>0</td>                   
+                        <td>{{item.TotalWins|number}}</td>               
+                        <td>{{item.Outstanding|number}}</td>
+                        <td>0</td>
+                        <td>{{item.Canceled|number}}({{item.CanceledNumber}})</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12" ng-controller="summaryReportController" ng-init="LoadBranches()">
+        <div class="panel panel-primary" data-ng-repeat="customer in Branches">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>  {{ customer.BranchName}}  Summary Report</h3>
+            </div>
+            <div class="panel-body" ng-init="BranchReport(customer.BranchId)">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <div id="shieldui-grid1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Business Day</td>
+                                <td>Ticket Sales</td>
+                                <td>Deposits</td>
+                                <td>Total Sales</td>
+                                <td>Ticket Payments</td>
+                                <td>WithDraws</td>
+                                <td>Total Payments</td>
+                                <td>Cash</td>
+                                <td>Total Winnings</td>
+                                <td>Total OutStanding Winnings</td>
+                                <td>Profits</td>
+                                <td>Cancelled Tickets</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in BranchSummary">
+                                <td>{{item.BusinessDay}}</td>
+                                <td>
+                                    <a href="~/LandLord/ApartmentHome/{{item.Sales}}"><i class="icon-eye-open">{{item.Sales|number}}</i></a>({{item.TicketSold}})
+                                </td>
+
+                                <td>0</td>
+                                <td>0</td>
+                                <td>{{item.PaidOrders|number}}({{item.TicketsPaid}})</td>
+                                <td>0</td>
+                                <td>{{item.PaidOrders|number}}</td>
+                                <td>0</td>
+                                <td>{{item.TotalWins|number}}</td>
+                                <td>{{item.Outstanding|number}}</td>
+                                <td>0</td>
+                                <td>{{item.Canceled|number}}({{item.CanceledNumber}})</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    
+    
+        <script src="~/Scripts/jscontrollers/summaryReportController.js"></script>

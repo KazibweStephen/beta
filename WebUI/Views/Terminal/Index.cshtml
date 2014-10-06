@@ -1,0 +1,51 @@
+﻿@model IEnumerable <Domain.Entities.Models.Terminal>
+
+@{
+    ViewBag.Title = "Terminals";
+    Layout = "~/Views/Shared/_BranchManager.cshtml";
+}
+
+@Html.ActionLink("Create New ","Create")
+<!--Begin Datatables-->
+          
+                    <table >
+                      <thead>
+                         <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TerminalName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.IPAddress)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DateCreated)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.isActive)
+                            </th>
+                            <th></th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TerminalName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IPAddress)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DateCreated)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.isActive)
+                                    </td>                                  
+                                </tr>
+                            }
+                       
+                      </tbody>
+                    </table>

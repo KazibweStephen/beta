@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewBag.Title = "TicketSales";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+
+<style>
+    a, button {
+        font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        display: block;
+        color: #333;
+        margin-bottom: 10px;
+    }
+</style>
+<link href="~/Content/angularcss/ngDialog.css" rel="stylesheet" />
+<link href="~/Content/angularcss/ngDialog-theme-default.css" rel="stylesheet" />
+<link href="~/Content/angularcss/ngDialog-theme-plain.css" rel="stylesheet" />
+<div ng-controller="popupController">
+
+    <script type="text/ng-template" id="modalDialogId">
+        <div class="ngdialog-message" ng-controller="popupController">
+            Are you Sure you want to Cancel this receipt
+        </div>
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="confirm(confirmValue)">Confirm</button>
+            <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')">Cancel</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="firstDialogId">
+        <div class="ngdialog-message" ng-o>
+            <h3>ngDialog template</h3>
+            <p ng-show="theme"> <code>{{theme}}</code></p>
+
+        </div>
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-secondary"
+                    ng-dialog="secondDialogId"
+                    ng-dialog-class="ngdialog-theme-default"
+                    ng-dialog-controller="SecondModalCtrl"
+                    ng-dialog-close-previous>
+                Close and open
+            </button>
+            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
+        </div>
+    </script>
+
+
+    <div class="row">
+        <div class="col-lg-12" ng-controller="recieptController" ng-init="loadReciepts(@ViewBag.BusinessDay)">
+            <div class="span12">
+
+                <div id="Person-1" class="box">
+                    <div class="box-header">
+                        <i class="icon-user icon-large"></i>
+                        <h5>Reciepts</h5>
+
+                    </div>
+
+                    <div class="box-content box-table">
+                        <div class="container">
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <h4>TicketSales</h4>
+                        <table class="table table-hover table-striped table-condensed table-bordered" style="width:1000px">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: #006dcc; color:white">Reciept</th>
+                                    <th style="background-color: #006dcc; color:white">Stake</th>
+                                    <th style="background-color: #006dcc; color:white">Time</th>
+                                    <th style="background-color: #006dcc; color:white">Total Odd</th>
+                                    <th style="background-color: #006dcc; color:white">Teller</th>
+                                    <th style="background-color: #006dcc; color:white"></th>
+                                    <th style="background-color: #006dcc; color:white"></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in Reciepts">
+                                    <td>
+                                        <input type="button" class="btn btn-primary  Details" value="{{item.RecieptID}}" />
+                                        <a href="~/Admin/TicketSales/{{item.Sales|number}}"><i class="icon-eye-open">{{item.Sales|number}}</i></a>({{item.TicketSold}})
+                                    </td>
+                                    <td>{{item.betmoney|number}}</td>
+                                    <td ng-bind="item.betdate"></td>
+                                    <td ng-bind="item.setodd"></td>
+                                    <td ng-bind="item.userid"></td>
+
+                                    <td><a class="btn btn-danger" href="" ng-click="openConfirm(item.RecieptID)">Cancel Reciept</a></td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th>{{Reciepts|sumByKey:'betmoney'}}</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="~/Scripts/jscontrollers/popupController.js"></script>
+<script src="~/Scripts/jscontrollers/recieptController.js"></script>
+<script src="~/Scripts/jscontrollers/InsideCtrl.js"></script>
+<script src="~/Scripts/jscontrollers/SecondModalCtrl.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript">
+    $('table').delegate('.Details', 'click', function () {
+
+        var reciept = $(this).val();
+      //  alert(reciept);
+        $.ajax({
+            url: '@Url.Action("RecieptData", "Recept")/' + reciept,
+            dataType: 'json',
+            type: 'GET'
+        }).done(function (data) {
+            var dt = '';
+            dt = '<table width="600"  id="rectable">';
+           // alert("out");
+            dt += ('' +
+                  '<th colspan="2"><b>Reciept Id: ' + reciept + '</b></th>');
+            //   alert(dt);
+            var status = "";
+            var betmoney = 0;
+            var setodd = 0;
+            var loop = 0;
+            var Cancel = false;
+            for (var i in data) {
+                status = data[i].status;
+                Cancel = data[i].Cancel;
+              //  alert(Cancel);
+                loop += 1;
+                if (loop == 1) {
+                    dt += (
+         '<tr>' +
+          '<td   colspan="2" >Stake:' + data[i].BetMoney + '</td>' + '</tr><tr>' +
+              '<td  data-field="matchId" class="match-code">Status:' + data[i].status + '</td>' + '</tr><tr>' +
+           '<td> TotalOdd:' + data[i].SetOdd + '</td>' +
+             '</tr>' +
+             '<tr><td colspan="2">-------------------------<td></tr>'
+                );
+                }
+                dt += (
+          '<tr class="match" id="' + data[i].id + '">' +
+           '<td  data-field="matchId" class="match-code" colspan="2" >' + data[i].team + '</td>' + '</tr><tr>' +
+               '<td  data-field="matchId" class="match-code">' + data[i].type + '</td>' +
+            '<td  data-field="betmoney" class="match-code">' + data[i].choice + '</td>' +
+
+              '</tr>' +
+              '<tr><td colspan="2">-----------------------<td></tr>'
+
+              );
+
+            }
+
+
+            dt += ('</table>');
+            if (status == "Won") {
+                dt += '<input id="payreciept" type="button" class="btn btn-success btn-xs odd" value="PayReciept" data-odd-type="1" />';
+                dt += ' <input class="form-control"   id="ReceiptId" value=' + reciept + ' type="text">';
+            }
+
+             if (Cancel) {
+                 dt += '<input type="button" id="recid"  class="btn btn-danger btn-xs cancel" value="CancelReciept"  />';
+                 dt += ' <input class="form-control"   id="Reciept" value=' + reciept + ' type="text">';
+             }
+             $("#dialog").html(dt);
+             $("#rectable tr:not(:first)").each(function () {
+                 $(this).find("td:nth-child(2)").css("color", "#00FF00");
+             });
+            // original data from the server
+            games = data;
+            console.log(games);
+            $("#dialog").dialog({
+                title: "Reciept Details",
+                buttons: {
+                    Close: function () {
+                        $(this).dialog('close');
+
+                    }
+
+                }
+
+            });
+
+        })
+
+        return false;
+    })
+    $("[id*=recid]").live("click", function () {
+        var recieptid = $("#Reciept").val();
+        alert(recieptid);
+        $.ajax({
+            url: '@Url.Action("CancelReciept", "Recept")/' + recieptid,
+            dataType: 'json',
+            type: 'GET'
+        }).done(function (data) {
+            window.location.reload();
+            $("#dialog").hide(20);
+           // alert("back");
+        })
+
+    })
+    $("[id*=payreciept]").live("click", function () {
+        var recieptid = $("#RecieptId").val();
+        alert(recieptid);
+        $.ajax({
+            url: '@Url.Action("PayReciept", "Recept")/' + recieptid,
+            dataType: 'json',
+            type: 'GET'
+        }).done(function (data) {
+            window.location.reload();
+            $("#dialog").hide(20);
+          //  location.reload();
+             alert("back");
+        })
+
+    })
+</script>
+
+
+<div id="dialog" style="display: none; width:1000px; ">
+    Reciept Details
+</div>
+

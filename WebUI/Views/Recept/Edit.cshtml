@@ -1,0 +1,109 @@
+﻿@model Domain.Entities.Receipt
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Receipt</legend>
+
+        @Html.HiddenFor(model => model.RecieptID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.userid)
+            @Html.ValidationMessageFor(model => model.userid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.betdate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.betdate)
+            @Html.ValidationMessageFor(model => model.betdate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.betmoney)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.betmoney)
+            @Html.ValidationMessageFor(model => model.betmoney)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setodd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setodd)
+            @Html.ValidationMessageFor(model => model.setodd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setsize)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setsize)
+            @Html.ValidationMessageFor(model => model.setsize)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.submitedsize)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.submitedsize)
+            @Html.ValidationMessageFor(model => model.submitedsize)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wonsize)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.wonsize)
+            @Html.ValidationMessageFor(model => model.wonsize)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.status)
+            @Html.ValidationMessageFor(model => model.status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setno)
+            @Html.ValidationMessageFor(model => model.setno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BranchId, "Branch")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("BranchId", String.Empty)
+            @Html.ValidationMessageFor(model => model.BranchId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

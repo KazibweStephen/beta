@@ -1,0 +1,155 @@
+﻿@model IEnumerable<Domain.ViewModels.GameViewModel>
+
+<style type="text/css">
+    .col-lg-12, .col-md-8, .col-md-offset-11, .col-sm-1 {
+        padding-left: 0;
+    }
+
+    .livebet {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+    }
+
+    .badge-live {
+        font-size: 10px;
+        font-weight: bold;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #ffff00;
+        color: #000000;
+    }
+
+    table {
+        font-size: 12px;
+        background-color: #d4e4f3;
+        color: #000000;
+    }
+
+    thead {
+        border: 0;
+        border-color: #191970;
+        background-color: #191970;
+        color: #ffffff;
+    }
+
+    tbody > tr > td {
+        border-left: #cccccc solid 1px;
+    }
+
+    tr {
+        vertical-align: central;
+    }
+
+    .table-striped > tbody > tr:nth-child(odd) > td,
+    .table-striped > tbody > tr:nth-child(odd) > th {
+        background-color: #f2f7f9;
+    }
+
+    .selections-header {
+        background-color: #ffffff;
+    }
+
+    .odd, .moreodds {
+        font-weight: bold;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+</style>
+<div id="maindiv" ng-controller="GamesController">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <input type="button" class="btn btn-xs btn-success" value="FT 1x2" data-bet-category="FT 1x2" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-primary" value="FT Under/Over" data-bet-category="FT Under/Over" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-warning" value="HT 1x2" data-bet-category="HT 1x2" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-danger" value="HT Under/Over" data-bet-category="HT Under/Over" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-default" value="Double Chance" data-bet-category="Double Chance" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-success" value="Handicap" data-bet-category="Handicap" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-warning" value="Both Teams To Score" data-bet-category="Both Team To Score" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-primary" value="First Team To Score" data-bet-category="First Team To Score" onclick="getBetCategoryOddTypes()" />
+            <input type="button" class="btn btn-xs btn-default" value="Draw No Bet" data-bet-category="Draw No Bet" onclick="getBetCategoryOddTypes()" />
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-md-8">
+            <div class="col-sm-offset-11 col-sm-1">
+                <input type="button" class="btn btn-danger btn-sm" value="More >>" id="morebtn" />
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-md-8">
+            <table class="table-striped oddstable" id="oddstable">
+                <thead>
+                    <tr>
+                        <th>
+                            Code
+                        </th>
+                        <th>
+                            Time
+                        </th>
+                        <th colspan="3" style="text-align: center;">
+                            Info
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="match">
+                    @*@foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @String.Format("{0}", item.Game.MatchNo)
+                        </td>
+                        <td>
+                            @String.Format("{0:t}", item.Game.StartTime)
+                        </td>
+                        <td class="livebet">
+                            <span class="badge">Live</span>
+                        </td>
+                        <td>
+                            1+
+                        </td>
+                        <td>
+                            @String.Format("{0} vs {1}", item.HomeTeam.TeamName, item.AwayTeam.TeamName)
+                        </td>
+                        <td>
+                            <input type="button" class="btn btn-default btn-xs odd" value="1.29" data-odd-type="1" />
+                        </td>
+                        <td>
+                            <input type="button" class="btn btn-default btn-xs odd" value="3.01" data-odd-type="X" />
+                        </td>
+                        <td>
+                            <input type="button" class="btn btn-default btn-xs odd" value="2.05" data-odd-type="2" />
+                        </td>
+                        <td class="livebet">
+                            <input type="button" class="btn btn-primary btn-xs moreodds" value="+56" />
+                        </td>
+                    </tr>
+                }*@
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4 selections-header">
+            <div class="col-md-12">
+                <div class="col-sm-12">
+                    @{
+                        @Html.Partial("Receipt");
+                }
+            </div>
+            <!--<div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>-->
+
+        </div>
+    </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+       
+       
+    </script>
+}

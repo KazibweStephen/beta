@@ -1,0 +1,66 @@
+﻿@model Domain.Entities.Models.Shift
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shift</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Terminal.TerminalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Terminal.TerminalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startcash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startcash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endcash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endcash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assignedto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assignedto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assignedby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assignedby)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.shiftid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

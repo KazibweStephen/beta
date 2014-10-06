@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/WebUI_deploy" />
+  <setParameter name="BetConnection-Web.config Connection String" value="Data Source=Hp;Initial Catalog=betwayug;Integrated Security=True" />
+</parameters>

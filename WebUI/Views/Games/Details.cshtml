@@ -1,0 +1,106 @@
+﻿@model Domain.Models.Concrete.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayTeam.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeam.TeamName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTeam.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeam.TeamName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Champ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Champ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalfTimeHomeScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalfTimeHomeScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalfTimeAwayScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalfTimeAwayScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scores sport="soccer">
+  <category name="England: Premier League" id="1204" file_group="england" iscup="False">
+    <matches date="Sep 29" formatted_date="29.09.2014">
+      <match status="19:00" date="Sep 29" formatted_date="29.09.2014" time="19:00" static_id="1755631" fix_id="1637978" id="1941624">
+        <localteam name="Stoke City" goals="?" id="9378" />
+        <visitorteam name="Newcastle Utd" goals="?" id="9287" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1773220" fix_id="1655598" id="1943152">
+        <localteam name="Hull City" goals="?" id="9221" />
+        <visitorteam name="Crystal Palace" goals="?" id="9127" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1773221" fix_id="1655599" id="1943153">
+        <localteam name="Leicester" goals="?" id="9240" />
+        <visitorteam name="Burnley" goals="?" id="9072" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1773222" fix_id="1655600" id="1943154">
+        <localteam name="Liverpool" goals="?" id="9249" />
+        <visitorteam name="West Brom" goals="?" id="9426" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1773224" fix_id="1655602" id="1943155">
+        <localteam name="Sunderland" goals="?" id="9384" />
+        <visitorteam name="Stoke City" goals="?" id="9378" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1773225" fix_id="1655603" id="1943156">
+        <localteam name="Swansea" goals="?" id="9387" />
+        <visitorteam name="Newcastle Utd" goals="?" id="9287" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="16:30" date="Oct 04" formatted_date="04.10.2014" time="16:30" static_id="1773218" fix_id="1655596" id="1943157">
+        <localteam name="Aston Villa" goals="?" id="9008" />
+        <visitorteam name="Manchester City" goals="?" id="9259" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="11:00" date="Oct 05" formatted_date="05.10.2014" time="11:00" static_id="1755639" fix_id="1637986" id="1943769">
+        <localteam name="Manchester United" goals="?" id="9260" />
+        <visitorteam name="Everton" goals="?" id="9158" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="13:05" date="Oct 05" formatted_date="05.10.2014" time="13:05" static_id="1755635" fix_id="1637982" id="1943770">
+        <localteam name="Chelsea" goals="?" id="9092" />
+        <visitorteam name="Arsenal" goals="?" id="9002" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="13:05" date="Oct 05" formatted_date="05.10.2014" time="13:05" static_id="1755642" fix_id="1637989" id="1943771">
+        <localteam name="Tottenham" goals="?" id="9406" />
+        <visitorteam name="Southampton" goals="?" id="9363" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="15:15" date="Oct 05" formatted_date="05.10.2014" time="15:15" static_id="1755643" fix_id="1637990" id="1943772">
+        <localteam name="West Ham" goals="?" id="9427" />
+        <visitorteam name="QPR" goals="?" id="9318" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="11:45" date="Oct 18" formatted_date="18.10.2014" time="11:45" static_id="1773237" fix_id="1655615" id="1945367">
+        <localteam name="Manchester City" goals="?" id="9259" />
+        <visitorteam name="Tottenham" goals="?" id="9406" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773233" fix_id="1655611" id="1945368">
+        <localteam name="Arsenal" goals="?" id="9002" />
+        <visitorteam name="Hull City" goals="?" id="9221" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773234" fix_id="1655612" id="1945369">
+        <localteam name="Burnley" goals="?" id="9072" />
+        <visitorteam name="West Ham" goals="?" id="9427" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773235" fix_id="1655613" id="1945370">
+        <localteam name="Crystal Palace" goals="?" id="9127" />
+        <visitorteam name="Chelsea" goals="?" id="9092" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773236" fix_id="1655614" id="1945371">
+        <localteam name="Everton" goals="?" id="9158" />
+        <visitorteam name="Aston Villa" goals="?" id="9008" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773238" fix_id="1655616" id="1945372">
+        <localteam name="Newcastle Utd" goals="?" id="9287" />
+        <visitorteam name="Leicester" goals="?" id="9240" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1773240" fix_id="1655618" id="1945373">
+        <localteam name="Southampton" goals="?" id="9363" />
+        <visitorteam name="Sunderland" goals="?" id="9384" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="12:30" date="Oct 19" formatted_date="19.10.2014" time="12:30" static_id="1755650" fix_id="1637997" id="1945374">
+        <localteam name="QPR" goals="?" id="9318" />
+        <visitorteam name="Liverpool" goals="?" id="9249" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="15:00" date="Oct 19" formatted_date="19.10.2014" time="15:00" static_id="1755652" fix_id="1637999" id="1946044">
+        <localteam name="Stoke City" goals="?" id="9378" />
+        <visitorteam name="Swansea" goals="?" id="9387" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Championship" id="1205" file_group="england" iscup="False">
+    <matches date="Sep 30" formatted_date="30.09.2014">
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784464" fix_id="1666842" id="1943221">
+        <localteam name="Brighton" goals="?" id="9065" />
+        <visitorteam name="Cardiff" goals="?" id="9083" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784465" fix_id="1666843" id="1943158">
+        <localteam name="Derby" goals="?" id="9133" />
+        <visitorteam name="Bournemouth" goals="?" id="9053" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784467" fix_id="1666845" id="1943159">
+        <localteam name="Middlesbrough" goals="?" id="9274" />
+        <visitorteam name="Blackpool" goals="?" id="9045" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784468" fix_id="1666846" id="1943222">
+        <localteam name="Millwall" goals="?" id="9276" />
+        <visitorteam name="Birmingham" goals="?" id="9039" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784469" fix_id="1666847" id="1943160">
+        <localteam name="Norwich" goals="?" id="9296" />
+        <visitorteam name="Charlton" goals="?" id="9088" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784470" fix_id="1666848" id="1943161">
+        <localteam name="Rotherham" goals="?" id="9333" />
+        <visitorteam name="Blackburn" goals="?" id="9044" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784471" fix_id="1666849" id="1943162">
+        <localteam name="Sheffield Wed" goals="?" id="9349" />
+        <visitorteam name="Ipswich" goals="?" id="9227" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784472" fix_id="1666850" id="1943163">
+        <localteam name="Watford" goals="?" id="9423" />
+        <visitorteam name="Brentford" goals="?" id="9059" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784473" fix_id="1666851" id="1943164">
+        <localteam name="Wigan" goals="?" id="9434" />
+        <visitorteam name="Nottingham" goals="?" id="9297" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="1784466" fix_id="1666844" id="1944399">
+        <localteam name="Leeds" goals="?" id="9238" />
+        <visitorteam name="Reading" goals="?" id="9324" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="1704887" fix_id="1587141" id="1944400">
+        <localteam name="Wolves" goals="?" id="9446" />
+        <visitorteam name="Huddersfield" goals="?" id="9220" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="19:00" date="Oct 01" formatted_date="01.10.2014" time="19:00" static_id="1784474" fix_id="1666852" id="1944401">
+        <localteam name="Fulham" goals="?" id="9175" />
+        <visitorteam name="Bolton" goals="?" id="9048" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 03" formatted_date="03.10.2014" time="18:45" static_id="1784476" fix_id="1666854" id="1944731">
+        <localteam name="Blackpool" goals="?" id="9045" />
+        <visitorteam name="Cardiff" goals="?" id="9083" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="11:15" date="Oct 04" formatted_date="04.10.2014" time="11:15" static_id="1784481" fix_id="1666859" id="1944915">
+        <localteam name="Leeds" goals="?" id="9238" />
+        <visitorteam name="Sheffield Wed" goals="?" id="9349" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784475" fix_id="1666853" id="1944916">
+        <localteam name="Blackburn" goals="?" id="9044" />
+        <visitorteam name="Huddersfield" goals="?" id="9220" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784477" fix_id="1666855" id="1944917">
+        <localteam name="Bolton" goals="?" id="9048" />
+        <visitorteam name="Bournemouth" goals="?" id="9053" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784478" fix_id="1666856" id="1944918">
+        <localteam name="Brentford" goals="?" id="9059" />
+        <visitorteam name="Reading" goals="?" id="9324" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784483" fix_id="1666861" id="1944922">
+        <localteam name="Norwich" goals="?" id="9296" />
+        <visitorteam name="Rotherham" goals="?" id="9333" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784485" fix_id="1666863" id="1944923">
+        <localteam name="Watford" goals="?" id="9423" />
+        <visitorteam name="Brighton" goals="?" id="9065" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784486" fix_id="1666864" id="1944924">
+        <localteam name="Wolves" goals="?" id="9446" />
+        <visitorteam name="Wigan" goals="?" id="9434" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: League One" id="1206" file_group="england" iscup="False">
+    <matches date="Sep 30" formatted_date="30.09.2014">
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1784939" fix_id="1667317" id="1933882">
+        <localteam name="Crewe" goals="?" id="9122" />
+        <visitorteam name="Notts County" goals="?" id="9298" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="12:00" date="Oct 04" formatted_date="04.10.2014" time="12:00" static_id="1784994" fix_id="1667372" id="1943165">
+        <localteam name="Chesterfield" goals="?" id="9097" />
+        <visitorteam name="Sheffield Utd" goals="?" id="9348" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784993" fix_id="1667371" id="1943166">
+        <localteam name="Bradford" goals="?" id="9056" />
+        <visitorteam name="Crewe" goals="?" id="9122" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1705999" fix_id="1588253" id="1943167">
+        <localteam name="Coventry" goals="?" id="9116" />
+        <visitorteam name="Crawley Town" goals="?" id="9120" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1706001" fix_id="1588255" id="1943372">
+        <localteam name="Fleetwood Town" goals="?" id="9168" />
+        <visitorteam name="Port Vale" goals="?" id="9313" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1706003" fix_id="1588257" id="1943373">
+        <localteam name="Leyton Orient" goals="?" id="9246" />
+        <visitorteam name="Swindon" goals="?" id="9389" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784995" fix_id="1667373" id="1943223">
+        <localteam name="Notts County" goals="?" id="9298" />
+        <visitorteam name="Gillingham FC" goals="?" id="9179" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784996" fix_id="1667374" id="1943168">
+        <localteam name="Peterborough" goals="?" id="9309" />
+        <visitorteam name="Oldham" goals="?" id="9301" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784997" fix_id="1667375" id="1943169">
+        <localteam name="Preston" goals="?" id="9317" />
+        <visitorteam name="Colchester" goals="?" id="9106" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784998" fix_id="1667376" id="1943170">
+        <localteam name="Rochdale" goals="?" id="9329" />
+        <visitorteam name="Barnsley" goals="?" id="9021" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1784999" fix_id="1667377" id="1943171">
+        <localteam name="Scunthorpe" goals="?" id="9345" />
+        <visitorteam name="Doncaster" goals="?" id="9135" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785000" fix_id="1667378" id="1943404">
+        <localteam name="Walsall" goals="?" id="9416" />
+        <visitorteam name="Bristol City" goals="?" id="9066" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1706017" fix_id="1588271" id="1943374">
+        <localteam name="Yeovil" goals="?" id="9459" />
+        <visitorteam name="Milton Keynes Dons" goals="?" id="9277" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1706021" fix_id="1588275" id="1945375">
+        <localteam name="Bristol City" goals="?" id="9066" />
+        <visitorteam name="Chesterfield" goals="?" id="9097" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785002" fix_id="1667380" id="1945634">
+        <localteam name="Crewe" goals="?" id="9122" />
+        <visitorteam name="Coventry" goals="?" id="9116" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785003" fix_id="1667381" id="1945377">
+        <localteam name="Doncaster" goals="?" id="9135" />
+        <visitorteam name="Notts County" goals="?" id="9298" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785004" fix_id="1667382" id="1945378">
+        <localteam name="Gillingham FC" goals="?" id="9179" />
+        <visitorteam name="Scunthorpe" goals="?" id="9345" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785005" fix_id="1667383" id="1945379">
+        <localteam name="Milton Keynes Dons" goals="?" id="9277" />
+        <visitorteam name="Rochdale" goals="?" id="9329" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785006" fix_id="1667384" id="1945380">
+        <localteam name="Oldham" goals="?" id="9301" />
+        <visitorteam name="Walsall" goals="?" id="9416" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785007" fix_id="1667385" id="1945381">
+        <localteam name="Port Vale" goals="?" id="9313" />
+        <visitorteam name="Yeovil" goals="?" id="9459" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: League Two" id="1197" file_group="england" iscup="False">
+    <matches date="Oct 03" formatted_date="03.10.2014">
+      <match status="18:45" date="Oct 03" formatted_date="03.10.2014" time="18:45" static_id="1707099" fix_id="1589356" id="1943172">
+        <localteam name="Burton" goals="?" id="9074" />
+        <visitorteam name="Cambridge Utd" goals="?" id="9080" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 03" formatted_date="03.10.2014" time="18:45" static_id="1785490" fix_id="1667868" id="1943173">
+        <localteam name="Dagenham &amp; Red." goals="?" id="9129" />
+        <visitorteam name="Exeter" goals="?" id="9160" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785488" fix_id="1667866" id="1943375">
+        <localteam name="Bury" goals="?" id="9075" />
+        <visitorteam name="Tranmere" goals="?" id="9408" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785489" fix_id="1667867" id="1943224">
+        <localteam name="Cheltenham" goals="?" id="9093" />
+        <visitorteam name="AFC Wimbledon" goals="?" id="8994" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785491" fix_id="1667869" id="1943174">
+        <localteam name="Hartlepool" goals="?" id="9202" />
+        <visitorteam name="Carlisle" goals="?" id="9084" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1707109" fix_id="1589366" id="1943175">
+        <localteam name="Mansfield" goals="?" id="9262" />
+        <visitorteam name="Accrington" goals="?" id="8987" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1707111" fix_id="1589368" id="1943176">
+        <localteam name="Oxford Utd" goals="?" id="9306" />
+        <visitorteam name="Newport" goals="?" id="9288" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1707113" fix_id="1589370" id="1943177">
+        <localteam name="Plymouth" goals="?" id="9311" />
+        <visitorteam name="Shrewsbury" goals="?" id="9354" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1707115" fix_id="1589372" id="1943178">
+        <localteam name="Southend" goals="?" id="9364" />
+        <visitorteam name="Morecambe" goals="?" id="9280" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785492" fix_id="1667870" id="1943179">
+        <localteam name="Stevenage" goals="?" id="9374" />
+        <visitorteam name="Luton" goals="?" id="9253" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785493" fix_id="1667871" id="1943376">
+        <localteam name="Wycombe" goals="?" id="9455" />
+        <visitorteam name="Northampton" goals="?" id="9293" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1785494" fix_id="1667872" id="1943225">
+        <localteam name="York" goals="?" id="9460" />
+        <visitorteam name="Portsmouth" goals="?" id="9314" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="11:15" date="Oct 11" formatted_date="11.10.2014" time="11:15" static_id="1785497" fix_id="1667875" id="1945382">
+        <localteam name="Cambridge Utd" goals="?" id="9080" />
+        <visitorteam name="Oxford Utd" goals="?" id="9306" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="13:00" date="Oct 11" formatted_date="11.10.2014" time="13:00" static_id="1785503" fix_id="1667881" id="1945383">
+        <localteam name="Northampton" goals="?" id="9293" />
+        <visitorteam name="Burton" goals="?" id="9074" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785496" fix_id="1667874" id="1945384">
+        <localteam name="Accrington" goals="?" id="8987" />
+        <visitorteam name="Dagenham &amp; Red." goals="?" id="9129" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785495" fix_id="1667873" id="1945385">
+        <localteam name="AFC Wimbledon" goals="?" id="8994" />
+        <visitorteam name="Bury" goals="?" id="9075" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785500" fix_id="1667878" id="1945638">
+        <localteam name="Luton" goals="?" id="9253" />
+        <visitorteam name="Southend" goals="?" id="9364" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785501" fix_id="1667879" id="1945386">
+        <localteam name="Morecambe" goals="?" id="9280" />
+        <visitorteam name="Wycombe" goals="?" id="9455" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785504" fix_id="1667882" id="1945387">
+        <localteam name="Portsmouth" goals="?" id="9314" />
+        <visitorteam name="Mansfield" goals="?" id="9262" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 11" formatted_date="11.10.2014" time="14:00" static_id="1785505" fix_id="1667883" id="1945388">
+        <localteam name="Shrewsbury" goals="?" id="9354" />
+        <visitorteam name="Cheltenham" goals="?" id="9093" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Conference Premier" id="1203" file_group="england" iscup="False">
+    <matches date="Sep 30" formatted_date="30.09.2014">
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1797515" fix_id="1679894" id="1943377">
+        <localteam name="Alfreton" goals="?" id="8996" />
+        <visitorteam name="Halifax" goals="?" id="9194" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1797516" fix_id="1679895" id="1943226">
+        <localteam name="Altrincham" goals="?" id="8999" />
+        <visitorteam name="Macclesfield" goals="?" id="9254" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1797517" fix_id="1679896" id="1943180">
+        <localteam name="Braintree" goals="?" id="9058" />
+        <visitorteam name="Barnet" goals="?" id="9020" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1798364" fix_id="1680743" id="1943181">
+        <localteam name="Dover Ath." goals="?" id="9138" />
+        <visitorteam name="Aldershot" goals="?" id="8995" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1798365" fix_id="1680744" id="1943182">
+        <localteam name="Eastleigh" goals="?" id="9148" />
+        <visitorteam name="Bristol Rovers" goals="?" id="9067" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795522" fix_id="1677901" id="1943183">
+        <localteam name="Forest Green" goals="?" id="9171" />
+        <visitorteam name="Torquay" goals="?" id="9405" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795523" fix_id="1677902" id="1943184">
+        <localteam name="Grimsby" goals="?" id="9191" />
+        <visitorteam name="Southport" goals="?" id="9365" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795524" fix_id="1677903" id="1943185">
+        <localteam name="Lincoln" goals="?" id="9247" />
+        <visitorteam name="Gateshead" goals="?" id="9178" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795521" fix_id="1677900" id="1943186">
+        <localteam name="Telford" goals="?" id="8992" />
+        <visitorteam name="Chester" goals="?" id="18822" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795525" fix_id="1677904" id="1943378">
+        <localteam name="Welling" goals="?" id="9425" />
+        <visitorteam name="Dartford" goals="?" id="9131" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795526" fix_id="1677905" id="1943227">
+        <localteam name="Woking" goals="?" id="9445" />
+        <visitorteam name="Nuneaton" goals="?" id="9300" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1795527" fix_id="1677906" id="1943228">
+        <localteam name="Wrexham" goals="?" id="9453" />
+        <visitorteam name="Kidderminster" goals="?" id="9230" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795528" fix_id="1677907" id="1944925">
+        <localteam name="Aldershot" goals="?" id="8995" />
+        <visitorteam name="Alfreton" goals="?" id="8996" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795529" fix_id="1677908" id="1944926">
+        <localteam name="Barnet" goals="?" id="9020" />
+        <visitorteam name="Eastleigh" goals="?" id="9148" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795530" fix_id="1677909" id="1944927">
+        <localteam name="Bristol Rovers" goals="?" id="9067" />
+        <visitorteam name="Dover Ath." goals="?" id="9138" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795531" fix_id="1677910" id="1944928">
+        <localteam name="Chester" goals="?" id="18822" />
+        <visitorteam name="Welling" goals="?" id="9425" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795532" fix_id="1677911" id="1944929">
+        <localteam name="Dartford" goals="?" id="9131" />
+        <visitorteam name="Grimsby" goals="?" id="9191" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795534" fix_id="1677913" id="1944933">
+        <localteam name="Macclesfield" goals="?" id="9254" />
+        <visitorteam name="Forest Green" goals="?" id="9171" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795535" fix_id="1677914" id="1944934">
+        <localteam name="Nuneaton" goals="?" id="9300" />
+        <visitorteam name="Lincoln" goals="?" id="9247" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1795536" fix_id="1677915" id="1944935">
+        <localteam name="Southport" goals="?" id="9365" />
+        <visitorteam name="Woking" goals="?" id="9445" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Conference North" id="1202" file_group="england" iscup="False">
+    <matches date="Sep 30" formatted_date="30.09.2014">
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1860975" fix_id="1743366" id="1941721">
+        <localteam name="Gloucester City" goals="?" id="9182" />
+        <visitorteam name="Solihull" goals="?" id="9361" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="1796304" fix_id="1678683" id="1940588">
+        <localteam name="Worcester" goals="?" id="9449" />
+        <visitorteam name="Boston" goals="?" id="9052" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796306" fix_id="1678685" id="1940589">
+        <localteam name="Barrow" goals="?" id="9022" />
+        <visitorteam name="Lowestoft" goals="?" id="9252" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796307" fix_id="1678686" id="1940809">
+        <localteam name="Boston" goals="?" id="9052" />
+        <visitorteam name="Hednesford" goals="?" id="9207" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796308" fix_id="1678687" id="1940638">
+        <localteam name="Brackley" goals="?" id="9054" />
+        <visitorteam name="Stalybridge" goals="?" id="9371" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796309" fix_id="1678688" id="1940639">
+        <localteam name="Chorley" goals="?" id="9100" />
+        <visitorteam name="Harrogate" goals="?" id="9200" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796310" fix_id="1678689" id="1940640">
+        <localteam name="Colwyn Bay" goals="?" id="9109" />
+        <visitorteam name="Oxford City" goals="?" id="9304" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796305" fix_id="1678684" id="1940590">
+        <localteam name="Fylde" goals="?" id="8988" />
+        <visitorteam name="North Ferriby" goals="?" id="9291" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796311" fix_id="1678690" id="1940641">
+        <localteam name="Gainsborough" goals="?" id="9176" />
+        <visitorteam name="Worcester" goals="?" id="9449" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796312" fix_id="1678691" id="1940591">
+        <localteam name="Guiseley" goals="?" id="9192" />
+        <visitorteam name="Tamworth" goals="?" id="9390" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796313" fix_id="1678692" id="1940592">
+        <localteam name="Leamington" goals="?" id="9236" />
+        <visitorteam name="Hyde" goals="?" id="9223" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796314" fix_id="1678693" id="1940593">
+        <localteam name="Solihull" goals="?" id="9361" />
+        <visitorteam name="Bradford PA" goals="?" id="9057" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796315" fix_id="1678694" id="1940594">
+        <localteam name="Stockport" goals="?" id="9376" />
+        <visitorteam name="Gloucester City" goals="?" id="9182" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 06" formatted_date="06.10.2014" time="18:45" static_id="1796316" fix_id="1678695" id="1943187">
+        <localteam name="Bradford PA" goals="?" id="9057" />
+        <visitorteam name="Barrow" goals="?" id="9022" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 06" formatted_date="06.10.2014" time="18:45" static_id="1796317" fix_id="1678696" id="1943188">
+        <localteam name="Hyde" goals="?" id="9223" />
+        <visitorteam name="Chorley" goals="?" id="9100" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796319" fix_id="1678698" id="1943379">
+        <localteam name="Harrogate" goals="?" id="9200" />
+        <visitorteam name="Gainsborough" goals="?" id="9176" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796320" fix_id="1678699" id="1943229">
+        <localteam name="Hednesford" goals="?" id="9207" />
+        <visitorteam name="Colwyn Bay" goals="?" id="9109" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796321" fix_id="1678700" id="1943189">
+        <localteam name="Lowestoft" goals="?" id="9252" />
+        <visitorteam name="Brackley" goals="?" id="9054" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1750917" fix_id="1633253" id="1943190">
+        <localteam name="North Ferriby" goals="?" id="9291" />
+        <visitorteam name="Leamington" goals="?" id="9236" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796322" fix_id="1678701" id="1943191">
+        <localteam name="Oxford City" goals="?" id="9304" />
+        <visitorteam name="Stockport" goals="?" id="9376" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Conference South" id="1202" file_group="england" iscup="False">
+    <matches date="Oct 04" formatted_date="04.10.2014">
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796723" fix_id="1679102" id="1940595">
+        <localteam name="Concord" goals="?" id="9110" />
+        <visitorteam name="Basingstoke" goals="?" id="9026" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796724" fix_id="1679103" id="1940596">
+        <localteam name="Eastbourne Borough" goals="?" id="9146" />
+        <visitorteam name="Staines" goals="?" id="9370" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796725" fix_id="1679104" id="1940597">
+        <localteam name="Farnborough" goals="?" id="9162" />
+        <visitorteam name="Ebbsfleet" goals="?" id="9150" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796726" fix_id="1679105" id="1940598">
+        <localteam name="Gosport" goals="?" id="9186" />
+        <visitorteam name="Hemel" goals="?" id="9208" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796727" fix_id="1679106" id="1940599">
+        <localteam name="Havant &amp; W" goals="?" id="9204" />
+        <visitorteam name="Boreham Wood" goals="?" id="9050" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796728" fix_id="1679107" id="1940600">
+        <localteam name="Hayes &amp; Yeading" goals="?" id="9205" />
+        <visitorteam name="Stortford" goals="?" id="9042" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796729" fix_id="1679108" id="1940601">
+        <localteam name="St. Albans" goals="?" id="9368" />
+        <visitorteam name="Chelmsford" goals="?" id="9091" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796730" fix_id="1679109" id="1940642">
+        <localteam name="Sutton" goals="?" id="9386" />
+        <visitorteam name="Bath City" goals="?" id="9027" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796731" fix_id="1679110" id="1940602">
+        <localteam name="Weston" goals="?" id="9428" />
+        <visitorteam name="Wealdstone" goals="?" id="9424" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 04" formatted_date="04.10.2014" time="14:00" static_id="1796732" fix_id="1679111" id="1940603">
+        <localteam name="Whitehawk" goals="?" id="18080" />
+        <visitorteam name="Maidenhead" goals="?" id="9255" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 06" formatted_date="06.10.2014" time="18:45" static_id="1796733" fix_id="1679112" id="1943194">
+        <localteam name="Boreham Wood" goals="?" id="9050" />
+        <visitorteam name="St. Albans" goals="?" id="9368" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 06" formatted_date="06.10.2014" time="18:45" static_id="1796734" fix_id="1679113" id="1943195">
+        <localteam name="Chelmsford" goals="?" id="9091" />
+        <visitorteam name="Concord" goals="?" id="9110" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 06" formatted_date="06.10.2014" time="18:45" static_id="1796735" fix_id="1679114" id="1943196">
+        <localteam name="Wealdstone" goals="?" id="9424" />
+        <visitorteam name="Havant &amp; W" goals="?" id="9204" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796736" fix_id="1679115" id="1943197">
+        <localteam name="Basingstoke" goals="?" id="9026" />
+        <visitorteam name="Whitehawk" goals="?" id="18080" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796737" fix_id="1679116" id="1943198">
+        <localteam name="Bath City" goals="?" id="9027" />
+        <visitorteam name="Gosport" goals="?" id="9186" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796739" fix_id="1679118" id="1943199">
+        <localteam name="Ebbsfleet" goals="?" id="9150" />
+        <visitorteam name="Eastbourne Borough" goals="?" id="9146" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796740" fix_id="1679119" id="1943200">
+        <localteam name="Maidenhead" goals="?" id="9255" />
+        <visitorteam name="Weston" goals="?" id="9428" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796742" fix_id="1679121" id="1943201">
+        <localteam name="Staines" goals="?" id="9370" />
+        <visitorteam name="Hayes &amp; Yeading" goals="?" id="9205" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1796738" fix_id="1679117" id="1943202">
+        <localteam name="Stortford" goals="?" id="9042" />
+        <visitorteam name="Bromley" goals="?" id="9068" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 18" formatted_date="18.10.2014" time="14:00" static_id="1796747" fix_id="1679126" id="1943405">
+        <localteam name="Gosport" goals="?" id="9186" />
+        <visitorteam name="Eastbourne Borough" goals="?" id="9146" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Premier League U21" id="2300" file_group="england" iscup="False">
+    <matches date="Sep 29" formatted_date="29.09.2014">
+      <match status="12:00" date="Sep 29" formatted_date="29.09.2014" time="12:00" static_id="1858269" fix_id="1740660" id="1940066">
+        <localteam name="Aston Villa U21" goals="?" id="21737" />
+        <visitorteam name="Bolton U21" goals="?" id="21816" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858992" fix_id="1741383" id="1941625">
+        <localteam name="Blackburn U21" goals="?" id="21738" />
+        <visitorteam name="Reading U21" goals="?" id="21744" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858921" fix_id="1741312" id="1941485">
+        <localteam name="Brighton U21" goals="?" id="23809" />
+        <visitorteam name="Wolves U21" goals="?" id="21740" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858922" fix_id="1741313" id="1941486">
+        <localteam name="Middlesbrough U21" goals="?" id="21741" />
+        <visitorteam name="West Brom U21" goals="?" id="21739" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858904" fix_id="1741295" id="1941246">
+        <localteam name="Southampton U21" goals="?" id="21750" />
+        <visitorteam name="Norwich U21" goals="?" id="21735" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858916" fix_id="1741307" id="1941445">
+        <localteam name="Tottenham U21" goals="?" id="21731" />
+        <visitorteam name="Manchester United U21" goals="?" id="21749" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Sep 29" formatted_date="29.09.2014" time="18:00" static_id="1858915" fix_id="1741306" id="1941430">
+        <localteam name="West Ham U21" goals="?" id="21732" />
+        <visitorteam name="Sunderland U21" goals="?" id="21730" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 05" formatted_date="05.10.2014" time="14:00" static_id="1862739" fix_id="1745130" id="1909307">
+        <localteam name="Everton U21" goals="?" id="21748" />
+        <visitorteam name="Liverpool U21" goals="?" id="21734" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="14:00" date="Oct 05" formatted_date="05.10.2014" time="14:00" static_id="1862366" fix_id="1744757" id="1944113">
+        <localteam name="Fulham U21" goals="?" id="21747" />
+        <visitorteam name="Manchester City U21" goals="?" id="21746" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 06" formatted_date="06.10.2014" time="18:00" static_id="1862160" fix_id="1744551" id="1942679">
+        <localteam name="Bolton U21" goals="?" id="21816" />
+        <visitorteam name="Derby U21" goals="?" id="23801" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 14" formatted_date="14.10.2014" time="18:45" static_id="1862161" fix_id="1744552" id="1942680">
+        <localteam name="Norwich U21" goals="?" id="21735" />
+        <visitorteam name="Tottenham U21" goals="?" id="21731" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 16" formatted_date="16.10.2014" time="18:00" static_id="1862162" fix_id="1744553" id="1942681">
+        <localteam name="West Brom U21" goals="?" id="21739" />
+        <visitorteam name="Aston Villa U21" goals="?" id="21737" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="12:00" date="Oct 17" formatted_date="17.10.2014" time="12:00" static_id="1862436" fix_id="1744827" id="1944280">
+        <localteam name="Reading U21" goals="?" id="21744" />
+        <visitorteam name="Middlesbrough U21" goals="?" id="21741" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 17" formatted_date="17.10.2014" time="18:00" static_id="1862437" fix_id="1744828" id="1944281">
+        <localteam name="Arsenal U21" goals="?" id="21733" />
+        <visitorteam name="Blackburn U21" goals="?" id="21738" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 17" formatted_date="17.10.2014" time="18:00" static_id="1862438" fix_id="1744829" id="1944282">
+        <localteam name="Chelsea U21" goals="?" id="21729" />
+        <visitorteam name="Fulham U21" goals="?" id="21747" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 20" formatted_date="20.10.2014" time="18:00" static_id="1862439" fix_id="1744830" id="1944283">
+        <localteam name="Bolton U21" goals="?" id="21816" />
+        <visitorteam name="Stoke City U21" goals="?" id="21743" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 20" formatted_date="20.10.2014" time="18:00" static_id="1862440" fix_id="1744831" id="1944284">
+        <localteam name="Newcastle Utd U21" goals="?" id="21736" />
+        <visitorteam name="Brighton U21" goals="?" id="23809" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 20" formatted_date="20.10.2014" time="18:00" static_id="1862441" fix_id="1744832" id="1944285">
+        <localteam name="Sunderland U21" goals="?" id="21730" />
+        <visitorteam name="Leicester U21" goals="?" id="22368" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="11:00" date="Oct 22" formatted_date="22.10.2014" time="11:00" static_id="1862944" fix_id="1745335" id="1944763">
+        <localteam name="Wolves U21" goals="?" id="21740" />
+        <visitorteam name="Derby U21" goals="?" id="23801" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:00" date="Oct 24" formatted_date="24.10.2014" time="18:00" static_id="1863169" fix_id="1745561" id="1945410">
+        <localteam name="West Ham U21" goals="?" id="21732" />
+        <visitorteam name="Manchester United U21" goals="?" id="21749" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Johnstone'S Paint Trophy" id="1200" file_group="england" iscup="False">
+    <matches date="Oct 07" formatted_date="07.10.2014">
+      <match status="18:00" date="Oct 07" formatted_date="07.10.2014" time="18:00" static_id="1857698" fix_id="1740089" id="1938157">
+        <localteam name="Hartlepool" goals="?" id="9202" />
+        <visitorteam name="Sheffield Utd" goals="?" id="9348" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:30" date="Oct 07" formatted_date="07.10.2014" time="18:30" static_id="1857699" fix_id="1740090" id="1938151">
+        <localteam name="Burton" goals="?" id="9074" />
+        <visitorteam name="Doncaster" goals="?" id="9135" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:30" date="Oct 07" formatted_date="07.10.2014" time="18:30" static_id="1857705" fix_id="1740096" id="1938156">
+        <localteam name="Dagenham &amp; Red." goals="?" id="9129" />
+        <visitorteam name="Leyton Orient" goals="?" id="9246" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:30" date="Oct 07" formatted_date="07.10.2014" time="18:30" static_id="1857696" fix_id="1740087" id="1938160">
+        <localteam name="Oldham" goals="?" id="9301" />
+        <visitorteam name="Barnsley" goals="?" id="9021" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:30" date="Oct 07" formatted_date="07.10.2014" time="18:30" static_id="1857703" fix_id="1740094" id="1938163">
+        <localteam name="Rochdale" goals="?" id="9329" />
+        <visitorteam name="Walsall" goals="?" id="9416" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:30" date="Oct 07" formatted_date="07.10.2014" time="18:30" static_id="1857702" fix_id="1740093" id="1938165">
+        <localteam name="Tranmere" goals="?" id="9408" />
+        <visitorteam name="Carlisle" goals="?" id="9084" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857701" fix_id="1740092" id="1938152">
+        <localteam name="Bury" goals="?" id="9075" />
+        <visitorteam name="Morecambe" goals="?" id="9280" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857706" fix_id="1740097" id="1938154">
+        <localteam name="Colchester" goals="?" id="9106" />
+        <visitorteam name="Gillingham FC" goals="?" id="9179" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857710" fix_id="1740101" id="1938155">
+        <localteam name="Coventry" goals="?" id="9116" />
+        <visitorteam name="Exeter" goals="?" id="9160" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857704" fix_id="1740095" id="1938158">
+        <localteam name="Luton" goals="?" id="9253" />
+        <visitorteam name="Crawley Town" goals="?" id="9120" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857707" fix_id="1740098" id="1938159">
+        <localteam name="Milton Keynes Dons" goals="?" id="9277" />
+        <visitorteam name="AFC Wimbledon" goals="?" id="8994" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1862746" fix_id="1745137" id="1944376">
+        <localteam name="Plymouth" goals="?" id="9311" />
+        <visitorteam name="Swindon" goals="?" id="9389" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857709" fix_id="1740100" id="1938161">
+        <localteam name="Portsmouth" goals="?" id="9314" />
+        <visitorteam name="Northampton" goals="?" id="9293" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857700" fix_id="1740091" id="1938162">
+        <localteam name="Preston" goals="?" id="9317" />
+        <visitorteam name="Port Vale" goals="?" id="9313" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 07" formatted_date="07.10.2014" time="18:45" static_id="1857697" fix_id="1740088" id="1938164">
+        <localteam name="Scunthorpe" goals="?" id="9345" />
+        <visitorteam name="Notts County" goals="?" id="9298" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 08" formatted_date="08.10.2014" time="18:45" static_id="1857708" fix_id="1740099" id="1938153">
+        <localteam name="Cheltenham" goals="?" id="9093" />
+        <visitorteam name="Bristol City" goals="?" id="9066" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Fa Cup - Qualification" id="1198" file_group="england" iscup="True">
+    <matches date="Sep 29" formatted_date="29.09.2014">
+      <match status="18:45" date="Sep 29" formatted_date="29.09.2014" time="18:45" static_id="" fix_id="" id="1945758">
+        <localteam name="Farnborough" goals="?" id="9162" />
+        <visitorteam name="Brackley" goals="?" id="9054" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 29" formatted_date="29.09.2014" time="18:45" static_id="" fix_id="" id="1945759">
+        <localteam name="Kingstonian" goals="?" id="9233" />
+        <visitorteam name="Romford" goals="?" id="9330" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945760">
+        <localteam name="Biggleswade Town" goals="?" id="9036" />
+        <visitorteam name="Dorking" goals="?" id="9137" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945761">
+        <localteam name="Concord" goals="?" id="9110" />
+        <visitorteam name="Wealdstone" goals="?" id="9424" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945762">
+        <localteam name="Enfield Town" goals="?" id="9155" />
+        <visitorteam name="Eastbourne Borough" goals="?" id="9146" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945763">
+        <localteam name="Fylde" goals="?" id="8988" />
+        <visitorteam name="Bradford PA" goals="?" id="9057" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945764">
+        <localteam name="Gloucester City" goals="?" id="9182" />
+        <visitorteam name="Paulton Rovers" goals="?" id="9308" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945765">
+        <localteam name="Gosport" goals="?" id="9186" />
+        <visitorteam name="Larkhall" goals="?" id="9235" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945766">
+        <localteam name="Lowestoft" goals="?" id="9252" />
+        <visitorteam name="Coalville" goals="?" id="9105" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945767">
+        <localteam name="Mickleover" goals="?" id="9273" />
+        <visitorteam name="Bedworth" goals="?" id="9032" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945768">
+        <localteam name="Newport IW" goals="?" id="9289" />
+        <visitorteam name="Winchester" goals="?" id="9438" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945769">
+        <localteam name="Norwich Utd" goals="?" id="20804" />
+        <visitorteam name="Barwell" goals="?" id="9024" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945770">
+        <localteam name="Poole Town" goals="?" id="9312" />
+        <visitorteam name="Bath City" goals="?" id="9027" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945771">
+        <localteam name="Salford" goals="?" id="9342" />
+        <visitorteam name="Ashton" goals="?" id="20740" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945772">
+        <localteam name="Sheffield FC" goals="?" id="9347" />
+        <visitorteam name="Warrington" goals="?" id="9422" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945773">
+        <localteam name="Stourbridge" goals="?" id="9380" />
+        <visitorteam name="Blaby &amp; Whetstone" goals="?" id="20745" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Sep 30" formatted_date="30.09.2014" time="18:45" static_id="" fix_id="" id="1945774">
+        <localteam name="Tooting Mitcham" goals="?" id="9404" />
+        <visitorteam name="Stortford" goals="?" id="9042" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="" fix_id="" id="1945775">
+        <localteam name="Evesham" goals="?" id="9159" />
+        <visitorteam name="Histon" goals="?" id="9214" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="" fix_id="" id="1945776">
+        <localteam name="Frome" goals="?" id="9174" />
+        <visitorteam name="Folland" goals="?" id="22167" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="" fix_id="" id="1945777">
+        <localteam name="Leek" goals="?" id="9239" />
+        <visitorteam name="Tividale" goals="?" id="20777" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 01" formatted_date="01.10.2014" time="18:45" static_id="" fix_id="" id="1945778">
+        <localteam name="Willand" goals="?" id="18130" />
+        <visitorteam name="Blackfield" goals="?" id="19942" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+  <category name="England: Capital One Cup" id="1199" file_group="england" iscup="True">
+    <matches date="Oct 28" formatted_date="28.10.2014">
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944619">
+        <localteam name="Bournemouth" goals="?" id="9053" />
+        <visitorteam name="West Brom" goals="?" id="9426" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944620">
+        <localteam name="Fulham" goals="?" id="9175" />
+        <visitorteam name="Derby" goals="?" id="9133" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944621">
+        <localteam name="Liverpool" goals="?" id="9249" />
+        <visitorteam name="Swansea" goals="?" id="9387" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944623">
+        <localteam name="Milton Keynes Dons" goals="?" id="9277" />
+        <visitorteam name="Sheffield Utd" goals="?" id="9348" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944624">
+        <localteam name="Shrewsbury" goals="?" id="9354" />
+        <visitorteam name="Chelsea" goals="?" id="9092" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944625">
+        <localteam name="Stoke City" goals="?" id="9378" />
+        <visitorteam name="Southampton" goals="?" id="9363" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 28" formatted_date="28.10.2014" time="18:45" static_id="" fix_id="" id="1944626">
+        <localteam name="Tottenham" goals="?" id="9406" />
+        <visitorteam name="Brighton" goals="?" id="9065" />
+        <events />
+        <ht score="" />
+      </match>
+      <match status="18:45" date="Oct 29" formatted_date="29.10.2014" time="18:45" static_id="1862841" fix_id="1745232" id="1944622">
+        <localteam name="Manchester City" goals="?" id="9259" />
+        <visitorteam name="Newcastle Utd" goals="?" id="9287" />
+        <events />
+        <ht score="" />
+      </match>
+    </matches>
+  </category>
+</scores>

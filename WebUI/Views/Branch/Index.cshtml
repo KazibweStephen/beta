@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Domain.Entities.Models.Branch>
+
+@{
+    ViewBag.Title = "Branch";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+<h2>Branches</h2>
+
+<p>
+    @Html.ActionLink("Create Branch", "Create")
+</p>
+
+
+
+
+<!--Begin Datatables-->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="box">
+               
+                  <div id="collapse4" class="body">
+                    <table id="dataTable" class="table table-bordered table-condensed table-hover table-striped">
+                      <thead>
+                          <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxCash)
+        </th>
+                          
+        <th>
+           @* @Html.DisplayNameFor(model => model.Manager.FirstName)*@
+            Manager
+        </th>
+    
+         <th>
+           #Terminals
+        </th>
+                              <th>
+                                  Branch Sk
+                              </th>
+        <th></th>
+    </tr>           </thead>
+                      <tbody>
+                     
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxCash)
+        </td>
+       
+         <td>
+            @Html.DisplayFor(modelItem => item.Terminals.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receipts.Sum(x=>x.betmoney).Value)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BranchId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BranchId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BranchId })|
+             @Html.ActionLink("Add terminal", "CreateTerminal", new { branchId=item.BranchId })
+        </td>
+    </tr>
+}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.row -->
+
+            <!--End Datatables-->
+
+<script>
+      $(function() {
+        Metis.MetisTable();
+        Metis.metisSortable();
+      });
+    </script>

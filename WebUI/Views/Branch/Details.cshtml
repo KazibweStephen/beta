@@ -1,0 +1,59 @@
+﻿ @model Domain.Entities.Branch
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Branch</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BranchName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BranchName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BranchCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BranchCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaxCash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaxCash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.user.fname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.fname)
+    </div>
+
+ 
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BranchId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,56 @@
+﻿@model Domain.Entities.Models.Terminal
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Manager.cshtml";
+}
+
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box">
+            <header class="dark">
+                <div class="icons"><i class="fa fa-check"></i></div>
+                <h5>Create Terminal</h5>              
+
+                <!-- .toolbar -->
+                <div class="toolbar">
+                    <nav style="padding: 8px;">
+                        <a href="javascript:;" class="btn btn-default btn-xs collapse-box">
+                            <i class="fa fa-minus"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-default btn-xs full-box">
+                            <i class="fa fa-expand"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-danger btn-xs close-box">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </nav>
+                </div>
+                <!-- /.toolbar -->
+            </header>
+
+            <div id="collapse2" class="body">
+                @using (Html.BeginForm("Create", "Terminal", FormMethod.Post, new { @class = "form-horizontal",id = "popup-validation", role = "form" }))
+                {
+    @Html.ValidationSummary(true)
+              
+
+                    
+                   @Html.Partial("_CreateOrEdit",Model)
+
+                    }
+                </div>
+            </div>
+        </div>  <!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+
+@{
+    ViewBag.Title = "terminal";
+}
+
+<h2>terminal</h2>

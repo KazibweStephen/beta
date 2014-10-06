@@ -1,0 +1,217 @@
+﻿@model Domain.Models.Concrete.MatchOdd
+
+@{
+    ViewBag.Title = "AddOdds";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+
+
+
+    
+ 
+    <div ng-controller="addOddsController" ng-init="loadMatch('@ViewBag.MatId')">
+    <table style="background-color: #f2f2f2; margin-left: auto; margin-right: auto; border: 1px solid #CCCCCC; padding: 10px; position: relative; font-weight: 700;"
+           width="650px" align="center">
+        <tr>
+            <td>
+                <label id="l1">@ViewBag.MatId</label>
+               
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6"><b>Match Result</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>Home</b>
+                <input id="oddhome" ng-model="FT1" type="text" />
+
+            </td>
+            <td colspan="2">
+                Draw
+
+                <input id="odddraw" ng-model="FTX" height="21px" width="86px"
+                       font-size="Medium" />
+            </td>
+            <td colspan="2">
+                <b>Away</b><input id="oddaway" ng-model="FT2" height="25px" width="103px"
+                                  font-size="Medium" />
+
+            </td>
+
+        </tr>
+        <tr style="background:#fff;">
+            <td colspan="6">
+                <b>
+                    <br />
+                 Double Chance<br />
+                </b>
+            </td>
+        </tr>
+        <tr style="background:#fff;">
+            <td colspan="2">
+                1/x<input id="txt1x" ng-model="DC1X" height="19px"
+                          width="102px" />
+            </td>
+
+            <td colspan="2">
+                1/2<input id="txt12" ng-model="DC12" height="18px"
+                          width="102px" />
+            </td>
+            <td colspan="2">
+                x/2<input id="txtx2" ng-model="DCX2" height="21px"
+                          width="102px" />
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br />
+      Half Time<br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                HT Home
+                <input id="txththome" ng-model="HT1" height="17px" width="102px" />
+
+            </td>
+            <td colspan="2">
+                HT Draw<input id="txthtdraw" ng-model="HTX" height="17px" width="102px" />
+            </td>
+            <td colspan="2">
+                HT Away&nbsp;
+                <input id="txthtaway" ng-model="HT2" height="21px" width="112px" />
+            </td>
+
+        </tr>
+        <tr style="background:#fff;">
+            <td colspan="6">Under Over </td>
+        </tr>
+        <tr style="background:#fff;">
+            <td>
+                Under0.5<input id="txtunder" ng-model="FTUNDER05" height="20px" width="137px" />
+            </td>
+            <td>
+                Over0.5<input id="txover05" ng-model="FTOVER05" height="20px" width="137px" />
+            </td>
+            <td>
+                Under1.5<input id="txtunder15" ng-model="FTUNDER15" height="20px" width="137px" />
+            </td>
+            <td>
+                Over1.5<input id="txtover15" ng-model="FTOVER15" height="20px" width="137px" />
+            </td>
+            <td>
+                Under 2.5<input id="txtunder25" ng-model="FTUNDER25" />
+            </td>
+            <td>
+                Over 2 .5<input id="txtover25" ng-model="FTOVER25" />
+            </td>
+           
+        </tr>
+        <tr><td>
+    under3.5<input id="txUneder35" ng-model="FTUnder35" />
+</td>
+<td>
+    Over3.5<input id="txtover35" ng-model="FTOVER35" />
+</td><td>    under4.5<input id="txUneder55" ng-model="FTUNDER45" /></td><td> Over4.5<input id="txtover35" ng-model="FTOVER45" /></td>
+        <td>  Over5.5<input id="txtover35" ng-model="FTUNDER55" />   </td><td>          Over5.5<input id="txtover35" ng-model="FTOVER55" /></td></tr>
+        <tr>
+            <td colspan="6">
+                <br />
+                GOAL GOAL
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                NO<input id="txtevenodd" ng-model="NG" height="20px" width="137px" />
+            </td>
+            <td colspan="3">
+                Yes<input id="txtoddodd" ng-model="GG" />
+            </td>
+
+        </tr>
+        <tr style="background:#fff;">
+            <td colspan="6">
+                <br />
+                Handicap Match<br />
+            </td>
+        </tr>
+        <tr style="background:#fff;">
+            <td colspan="3">
+                <b>Home goals</b><input id="txthandhome" ng-model="HomeGoal" height="20px" width="69px" />
+            </td>
+            <td colspan="3">
+                <b>Away goals</b><input id="txthandaway" ng-model="AwayGoal" height="20px" width="100px" font-size="Medium" />
+                <asp:label id="Label1"></asp:label>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                Handicap Home odd<input id="Txthchome" ng-model="HC1" height="19px"
+                                        width="102px" />
+            </td>
+            <td colspan="2">
+                Handicap Draw odd<input id="Txthcdraw" ng-model="HCX" height="21px"
+                                        width="102px" />
+            </td>
+            <td colspan="2">
+                Handicap Away odd<input id="Txthcaway" ng-model="HC2" height="18px"
+                                        width="102px" />
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td colspan="6">
+
+
+
+                <br />
+                HalfTime Under<br />
+
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                under 0.5   <input id="Txthchome" ng-model="oddHtUnder05" height="19px"
+                                   width="102px" />
+            </td>
+            <td>
+                over 0.5   <input id="Txthcdraw" ng-model="oddHtOver05" height="21px"
+                                  width="102px" />
+            </td>
+            <td>
+                1.5 under    <input id="Txthcaway" ng-model="oddHtUnder15" height="18px"
+                                    width="102px" />
+            </td>
+            <td>
+                1.5 over    <input id="Txthcaway" ng-model="oddHtOver15" height="18px"
+                                   width="102px" />
+            </td>
+            <td>
+                2.5  under  <input id="Txthcaway" ng-model="oddHtUnder25" height="18px"
+       width="102px" />
+            </td>
+            <td>
+            2.5  Over   <input id="Txthcaway" ng-model="oddHtOver25" height="18px"
+                       width="102px" />
+
+            </td>
+
+        </tr>
+      
+        <tr><td><button type="submit" class="btn btn-primary" ng-click="addodds ('@ViewBag.MatId')">Submit Odds</button></td></tr>
+    </table>
+</div>
+     
+
+
+<script src="~/Scripts/jscontrollers/addOddsController.js"></script>

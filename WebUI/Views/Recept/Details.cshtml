@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Domain.Entities.Models.BettedMatch>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_BranchManager.cshtml";
+}
+
+<h2>Reciept Details</h2>
+
+<div ng-controller="recieptDetailController" ng-init="loadReciepts(@ViewBag.RecieptId)">
+    <table class="table table-bordered">
+        <tr>
+
+            <th>
+                Game
+            </th>
+            <th>
+                MatchTime
+            </th>
+
+            <th>
+                BetType
+            </th>
+            <th>
+                Choice
+            </th>
+            <th>
+                MatchOdd
+            </th>
+            <th>
+                Results
+            </th>
+
+        </tr>
+
+
+
+        <tr ng-repeat="item in Reciepts">
+            <td ng-bind="item.team"></td>
+            <td ng-bind="item.time"></td>
+            <td ng-bind="item.choice"></td>
+            <td ng-bind="item.type"></td>
+            <td ng-bind="item.odd"></td>
+            <td ng-bind="item.score"></td>
+
+        </tr>
+
+
+
+
+    </table>
+</div>
+<script src="~/Scripts/jscontrollers/recieptDetailController.js"></script>
