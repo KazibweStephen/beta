@@ -1,68 +1,111 @@
 ﻿<style type="text/css">
-    .col-lg-12, .col-md-8, .col-md-offset-11, .col-sm-1 {
-        padding-left: 0;
-    }
+     /* table #oddstable> thead*/
+     .selected_option {
+         background-color: goldenrod;
+     }
 
-    .livebet {
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 2px;
-    }
+     #categories2 {
+         position: fixed;
+         top: 60px;
+         z-index: 1000;
+         opacity: 1;
+         background-color: oldlace;
+     }
 
-    .badge-live {
-        font-size: 10px;
-        font-weight: bold;
-        -ms-border-radius: 2px;
-        border-radius: 2px;
-        background-color: #ffff00;
-        color: #000000;
-    }
+     /* #categories1{
+         position: fixed;
+         top: 100px;
+         z-index: 1000;
+         opacity: 0.8;
+     }*/
+     #maindiv {
+         margin-top: 65px;
+         max-height: 700px;
+         overflow: scroll;
+     }
 
-    table {
-        font-size: 12px;
-        background-color: #d4e4f3;
-        color: #000000;
-    }
+     table #oddstable thead, table #oddstable, tbody {
+         /* display: block;
+     width: 400px;*/
+     }
 
-    thead {
-        border: 0;
-        border-color: #191970;
-        background-color: #191970;
-        color: #ffffff;
-    }
+     table #oddstable, tbody {
+         /* overflow: auto;
+    height: 700px;
+     width: 500px;*/
+     }
 
-    tbody > tr > td {
-        border-left: #cccccc solid 1px;
-    }
+         table #oddstable thead th {
+             /* width: 10px;*/
+         }
 
-    tr {
-        vertical-align: central;
-    }
 
-    .table-striped > tbody > tr:nth-child(odd) > td,
-    .table-striped > tbody > tr:nth-child(odd) > th {
-        background-color: #f2f7f9;
-    }
 
-    .selections-header {
-        background-color: #ffffff;
-    }
+     .col-lg-12, .col-md-8, .col-md-offset-11, .col-sm-1 {
+         padding-left: 0;
+     }
 
-    .odd, .moreodds {
-        font-weight: bold;
-    }
+     .livebet {
+         padding-left: 5px;
+         padding-right: 5px;
+         padding-top: 2px;
+     }
 
-    .center-text {
-        text-align: center;
-    }
+     .badge-live {
+         font-size: 10px;
+         font-weight: bold;
+         -ms-border-radius: 2px;
+         border-radius: 2px;
+         background-color: #ffff00;
+         color: #000000;
+     }
 
-    .oddCategory {
-        
-    }
+     table {
+         font-size: 12px;
+         background-color: #d4e4f3;
+         color: #000000;
+     }
+
+     thead {
+         border: 0;
+         border-color: #191970;
+         background-color: #191970;
+         color: #ffffff;
+     }
+
+     tbody#oddstable > tr > td {
+         border-left: #cccccc solid 2px;
+     }
+
+     tr {
+         vertical-align: central;
+     }
+
+     .table-striped > tbody > tr:nth-child(odd) > td,
+     .table-striped > tbody > tr:nth-child(odd) > th {
+         background-color: #f2f7f9;
+     }
+
+     .selections-header {
+         background-color: #ffffff;
+     }
+
+     .odd, .moreodds {
+         font-weight: bold;
+     }
+
+     .center-text {
+         text-align: center;
+     }
+
+     .oddCategory {
+     }
 </style>
+<
+
 <div id="maindiv">
-    <div class="col-lg-12">
-        <div class="form-group">
+    <div class="col-lg-12" id="categories2">
+        <div class="form-group" id="categories">
             <input type="button" class="btn btn-xs btn-success oddCategory" value="FT 1x2" data-bet-category="FT 1x2" />
             <input type="button" class="btn btn-xs btn-primary oddCategory" value="FT U/O" data-bet-category="FT U/O" />
             <input type="button" class="btn btn-xs btn-warning oddCategory" value="HT 1x2" data-bet-category="HT 1x2" />
@@ -72,23 +115,30 @@
             <input type="button" class="btn btn-xs btn-warning oddCategory" value="Both Teams To Score" data-bet-category="Both Teams To Score" />
             <input type="button" class="btn btn-xs btn-primary oddCategory" value="First Team To Score" data-bet-category="First Team To Score" />
             <input type="button" class="btn btn-xs btn-default oddCategory" value="Draw No Bet" data-bet-category="Draw No Bet" />
-      
+            <label id="tellerBalance" class="badge btn-large btn-primary pull-right">Teller balance</label>
         </div>
-    </div>
- 
-    <div class="col-lg-12">
-        <div class="col-md-8">
-            <table class="table-striped" id="oddstable">
+        <div style="margin-top:3px;margin-bottom: 3px" class="form-group" id="categories1">
+            <table class="table-striped hidden" id="headersstable">
                 <thead>
                     <tr></tr>
                 </thead>
-                <tbody id="match">
-        
-                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="col-md-8">
+
+            <table class="table-striped table-hover" id="oddstable">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody id="match"></tbody>
             </table>
         </div>
         <div class="col-lg-4 selections-header">
-            
+
             <div class="col-md-12">
                 <div class="col-sm-12">
                     @{

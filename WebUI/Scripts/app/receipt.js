@@ -15,6 +15,9 @@ function BettingApp() {
         $('#app > footer').text(message);
 
     };
+    this.getBetList = function () {
+        return betList;
+    };
     this.start = function (_maximumNumBet, _minStake, _setMaxPayoutPossible,_tax) {
         $('#app > header').append(version);
         setStatus("Ready...");
@@ -348,8 +351,6 @@ function BettingApp() {
 
 $(function () {
 
-    this.renderTable = new RenderTables();
-    this.renderTable.startRenderingTables();
     //please avoid using the "this" as this in other languages like C# and Java means
     // the object you are inside of but here in javascripts it can mean  different things as follows
     //1. it can mean the object your inside of
@@ -370,52 +371,120 @@ $(function () {
     var tax = 0;
 
     var thisApp = this.app = new BettingApp();
+    this.renderTable = new RenderTables(this.app.getBetList());
+    this.renderTable.startRenderingTables();
     this.app.start(maximumNumBets, minStake, setMaxPayoutPossible, tax);
     //var thisApp = this.app;
 
     // var $match = $('table');
     //var $match = $("#match .match");
     // var betList = new Array();
-    $('table').delegate('.odd', 'click', function () {
+    $('table').delegate('.odd', 'mouseover', function () {
+        //console.log("hovered");
         // alert("fired click");
         var $that = $(this);
+
         var chosenOdd = $that.val(),
             optionId = $that.data("option-id"),
             handCapGoalString = $that.data("hc-homegoal") + ":" + $that.data("hc-awaygoal"),
-        $matchCode = $that.parent().siblings("td.match-code"),
-        matchCode = $.trim($matchCode.text()),
-        optionName = $that.data("option-name"),
-        bet = new Bet(matchCode);
-        console.log(handCapGoalString);
-        bet.handCapGoalString = handCapGoalString;
-        bet.odd = chosenOdd;
-        bet.optionId = optionId;
-        bet["optionName"] = optionName;
-        bet["betCategory"] = $that.data("bet-category");
-        bet["optionName"] = $that.data("option-name");
-        $matchCode.siblings("td").each(function () {
-            var fieldName = $(this).data("field");
-            bet[fieldName] = $(this).text();
-        });
-        var $parentTr = $matchCode.parent();
-        $("td>input.odd", $parentTr).each(function () {
-            var fieldName = $(this).data("field");
-            if (fieldName) {
-                //bet[fieldName] = $(this).val();
-                // bet["betCategory"] = $(this).data("bet-category");
-                // bet["optionName"] = $(this).data("option-name");
-            }
-            //alert("fired click");
-        });
+            $matchCode = $that.parent().siblings("td.match-code"),
+            matchCode = $.trim($matchCode.text()),
+            optionName = $that.data("option-name"),
+            bet = new Bet(matchCode);
+        //attach tooltips
+        makeToolTip($that, { matchCode: matchCode, optionName: optionName });
 
-
-
-        // betList.push(bet);
-        makeBet(bet);
-
-
-        console.log(bet);
     });
+
+    var $categories2 = $("#categories2");
+    $("#maindiv").scroll(function () {
+
+        var mainDivScrollPosition = $("#maindiv").scrollTop();
+
+        // console.log(/*categories2.bottom + "-" +*/ oddstable);
+
+        if (mainDivScrollPosition > 29) {
+            //console.log("scrolled");
+            $("table", $categories2).removeClass("hidden");
+        } else if (mainDivScrollPosition < 29) {
+            //console.log("scrolled");
+            $("table", $categories2).addClass("hidden");
+        }
+    });
+
+    $('table').delegate('.odd', 'click', function () {
+
+        // alert("fired click");
+
+        var $that = $(this);
+        //check if the match has already been selected, if yes remove it from the list an receipt
+
+        if (checkForAlreadySelectedMatch($that) == true) {
+
+            var chosenOdd = $that.val(),
+                optionId = $that.data("option-id"),
+                handCapGoalString = $that.data("hc-homegoal") + ":" + $that.data("hc-awaygoal"),
+                $matchCode = $that.parent().siblings("td.match-code"),
+                matchCode = $.trim($matchCode.text()),
+                optionName = $that.data("option-name"),
+                bet = new Bet(matchCode);
+            // $that.tooltip({ placement: 'top', title:''+ matchCode + " " + optionName +''});
+            // console.log(handCapGoalString);
+            bet.handCapGoalString = handCapGoalString;
+            bet.odd = chosenOdd;
+            bet.optionId = optionId;
+            bet["optionName"] = optionName;
+            bet["betCategory"] = $that.data("bet-category");
+            bet["optionName"] = $that.data("option-name");
+            $matchCode.siblings("td").each(function () {
+                var fieldName = $(this).data("field");
+                bet[fieldName] = $(this).text();
+            });
+            var $parentTr = $matchCode.parent();
+            $("td>input.odd", $parentTr).each(function () {
+                var fieldName = $(this).data("field");
+                if (fieldName) {
+                    //bet[fieldName] = $(this).val();
+                    // bet["betCategory"] = $(this).data("bet-category");
+                    // bet["optionName"] = $(this).data("option-name");
+                }
+                //alert("fired click");
+            });
+
+
+            // betList.push(bet);
+            makeBet(bet);
+            scrollReceiptToBottom();
+
+
+            console.log(bet);
+
+
+        } else {
+            alert("Match already exits on the receipt remove it first to select again");
+        }
+
+    });
+
+    var scrollReceiptToBottom = function () {
+        var mainAppScrollPosition = $("#app").scrollTop();
+        $("#app").scrollTop(500);
+        console.log(mainAppScrollPosition);
+    };
+    function checkForAlreadySelectedMatch($input) {
+        if ($input.hasClass("selected_option")) {
+            //$input.removeClass("selected_option");
+            return false;
+        } else {
+
+            $input.toggleClass("selected_option");
+            return true;
+        }
+    }
+
+    function makeToolTip($input, objArgs) {
+        $input.tooltip({ placement: 'top', title: '' + objArgs.matchCode + "-" + objArgs.optionName + '' });
+    }
     function makeBet(bet) {
 
         thisApp.mockBets(bet);

@@ -67,6 +67,24 @@ function BetList(bets) {
         });
         return found;
     };
+    this.getBetByOptionNameAndMatchId = function (matchId, optionName) {
+
+        var found = false;
+        this.each(function (bet) {
+
+
+            if (bet.matchId === matchId && bet.optionName.toString() === optionName.toString()) {
+                //alert(" " + bet.matchId + "Froma Ui " +  matchId+ "in bet");
+
+                found = true;
+                return found;
+
+            }
+
+        });
+        //console.log(bet.optionName + "---" + optionName);
+        return found;
+    };
     this.removeBet = function (betId) {
         var betIndex = getBetIndex(betId);
         if (betIndex >= 0) {
